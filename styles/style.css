@@ -235,6 +235,128 @@ html {
   overflow: hidden;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+.wrapper {
+  width: 85%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+section {
+  min-height: 100vh;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2 {
+  font-family: "Elsie", cursive;
+}
+
+button,
+input,
+a {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+header h1 {
+  font-size: 7rem;
+  font-weight: 900;
+}
+
+header p {
+  font-size: 2.8rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+form p {
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+form label {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 5rem;
+  font-weight: 400;
+}
+
 header {
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+header p {
+  margin-bottom: 80px;
 }
