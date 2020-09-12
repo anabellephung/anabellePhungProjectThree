@@ -1,11 +1,13 @@
-$body: #0e0b0d;
-$click:  rgb(174, 139, 206);
+$dark: #0e0b0d;
+$main:  #b695bd;
 
 body {
-  color: $body;
+  background: $main;
+  color: $dark;
 }
 button,
 input,
 a {
-  background-color: $click;
+  background-color: $main;
+  color: $dark;
 }

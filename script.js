@@ -207,7 +207,7 @@ $('form').on('submit', function(e) {
   const displayProducts = randomProduct(finalProducts);
   $('#skincareProduct').html(`
   <h2>${displayProducts.title}</h2>
-  <a href='${displayProducts.whereToBuy}' target='_blank'>Purchase Product Here!</a>
+  <a href='${displayProducts.whereToBuy}' target='_blank'>Purchase product here!</a>
   `);
 });
 

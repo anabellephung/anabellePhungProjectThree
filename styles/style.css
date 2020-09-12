@@ -292,22 +292,20 @@ img {
   display: block;
 }
 
-input,
 button,
-textarea,
-select {
-  font: inherit;
+input {
+  cursor: pointer;
+  border: none;
 }
 
 button,
 input,
 a {
-  border: 1px solid;
-}
-
-button,
-input {
-  border: none;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #c39fca, #a486aa);
+  -webkit-box-shadow: 13px 13px 27px #9b7fa1,  -13px -13px 27px #d1abd9;
+          box-shadow: 13px 13px 27px #9b7fa1,  -13px -13px 27px #d1abd9;
 }
 
 body {
@@ -321,9 +319,10 @@ h1, h2 {
 button,
 input,
 a {
+  font-family: "Roboto", sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
 }
 
 header h1 {
@@ -354,13 +353,15 @@ h2 {
 }
 
 body {
+  background: #b695bd;
   color: #0e0b0d;
 }
 
 button,
 input,
 a {
-  background-color: #ae8bce;
+  background-color: #b695bd;
+  color: #0e0b0d;
 }
 
 header {
@@ -379,5 +380,5 @@ header {
 }
 
 header p {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }

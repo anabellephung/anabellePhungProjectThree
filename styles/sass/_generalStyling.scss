@@ -55,20 +55,18 @@ img {
   display: block;
 }
 
-input,
 button,
-textarea,
-select {
-  font: inherit;
+input {
+  cursor: pointer;
+  border: none;
 }
 
 button,
 input,
 a {
-  border: 1px solid;
-}
-
-button,
-input {
-  border: none;
+  padding: 20px;
+  border-radius: 20px;
+  background:  linear-gradient(145deg, #c39fca, #a486aa);
+  box-shadow: 13px 13px 27px #9b7fa1, 
+              -13px -13px 27px #d1abd9;
 }
