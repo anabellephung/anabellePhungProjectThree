@@ -1,5 +1,3 @@
-
-
 const skincareProducts = {
   cleanser: [
     {
