@@ -47,7 +47,7 @@ ol[class] {
 }
 
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  text-decoration: none;
 }
 
 img {
@@ -60,4 +60,15 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+button,
+input,
+a {
+  border: 1px solid;
+}
+
+button,
+input {
+  border: none;
 }

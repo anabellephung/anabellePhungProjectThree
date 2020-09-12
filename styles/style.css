@@ -284,7 +284,7 @@ ol[class] {
 }
 
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  text-decoration: none;
 }
 
 img {
@@ -297,6 +297,17 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+button,
+input,
+a {
+  border: 1px solid;
+}
+
+button,
+input {
+  border: none;
 }
 
 body {
@@ -340,6 +351,16 @@ form label {
 h2 {
   font-size: 5rem;
   font-weight: 400;
+}
+
+body {
+  color: #0e0b0d;
+}
+
+button,
+input,
+a {
+  background-color: #ae8bce;
 }
 
 header {
