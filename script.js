@@ -62,7 +62,7 @@ const skincareProducts = {
       title: 'Squalane + Phyto-Retinol Serum',
       price: '$$$',
       skinType: ['oily', 'dry', 'combination', 'normal'],
-      skinGoal: 'anti-aging',
+      skinGoal: ['anti-aging'],
       whereToBuy: 'https://www.sephora.com/product/squalane-phyto-retinol-serum-P429028',
     },
 
@@ -70,7 +70,7 @@ const skincareProducts = {
       title: 'Caudalie Vinopure Natural Salicylic Acid Pore Minimizing Serum',
       price: '$$$',
       skinType: ['oily', 'combination'],
-      skinGoal: 'acne',
+      skinGoal: ['acne'],
       whereToBuy: 'https://www.sephora.com/ca/en/product/vinopure-natural-salicylic-acid-pore-minimizing-serum-P433626'
     },
 
@@ -78,7 +78,7 @@ const skincareProducts = {
       title: 'Dr. Jart+ Cicapair Tiger Grass Serum',
       price: '$$',
       skinType: ['oily', 'dry', 'combination', 'normal'],
-      skinGoal: 'acne',
+      skinGoal: ['acne'],
       whereToBuy: 'https://www.sephora.com/product/tiger-grass-re-pair-serum-P423259',
     },
 
@@ -94,7 +94,7 @@ const skincareProducts = {
       title: 'The Ordinary Alpha Arbutin 2% + HA',
       price: '$',
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
-      skinGoal: 'brightening',
+      skinGoal: ['brightening'],
       whereToBuy: 'https://www.sephora.com/ca/en/product/the-ordinary-deciem-alpha-arbutin-2-ha-P427412',
     },
 
@@ -102,7 +102,7 @@ const skincareProducts = {
       title: 'The INKEY List Q10 Antioxidant Serum',
       price: '$',
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
-      skinGoal: 'anti-aging',
+      skinGoal: ['anti-aging'],
       whereToBuy: 'https://www.theinkeylist.com/products/q10',
     },
 
@@ -120,7 +120,7 @@ const skincareProducts = {
       title: 'SK-II R.N.A. POWER Anti-Aging Face Cream',
       price: '$$$',
       skinType: ['dry', 'sensitive', 'normal'],
-      skinGoal: 'anti-aging',
+      skinGoal: ['anti-aging'],
       whereToBuy: 'https://www.sephora.com/product/r-n-a-power-radical-new-age-cream-P405950',
     },
 
@@ -152,14 +152,14 @@ const skincareProducts = {
       title: 'CeraVe Moisturizing Cream',
       price: '$',
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
-      skinGoal: 'brightening',
+      skinGoal: ['brightening'],
       whereToBuy: 'https://www.walmart.ca/en/ip/cerave-moisturizing-cream/6000105907280',
     },
 
     {
       title: 'Neutrogena Hydro Boost Facial Gel Cream with Hyaluronic Acid',
       price: '$',
-      skinType: 'dry',
+      skinType: ['dry'],
       skinGoal: ['brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.walmart.ca/en/ip/neutrogena-hydro-boost-facial-gel-cream-with-hyaluronic-acid/6000192034944',
     },
@@ -167,7 +167,7 @@ const skincareProducts = {
     {
       title: 'Cetaphil Daily Hydrating Lotion',
       price: '$',
-      skinType: 'sensitive',
+      skinType: ['sensitive'],
       skinGoal: ['brightening', 'acne'],
       whereToBuy: 'https://www.walmart.ca/en/ip/cetaphil-daily-hydrating-lotion/6000198008661',
     },
@@ -197,12 +197,14 @@ $('form').on('submit', function(e) {
   const products = skincareProducts[chosenProduct];
   
   const finalProducts = [];
-  for (let i = 0; i < products.length; i++) {
-    const product = products[i];
-    if (budgetToSpend === product.price) {
-      finalProducts.push(product);
-    }
-  }
+  products.forEach((product) => {
+    const type = product.skinType.includes(skincareType)
+    const goal = product.skinGoal.includes(skincareGoal)
+    if (type && goal && budgetToSpend === product.price) {
+       finalProducts.push(product);
+     }
+  })
+  console.log(finalProducts);
   // Display randomly chosen product on page in 'skincareProduct' div
   const displayProducts = randomProduct(finalProducts);
   $('#skincareProduct').html(`
@@ -212,17 +214,14 @@ $('form').on('submit', function(e) {
 });
 
 // Allow user to start quiz again
+$("#toQuiz").click(function () {
+  $("section").toggle();
+  $('html,body').animate({
+    scrollTop: $("section").offset().top - 100
+  }, 900);
+});
+
 // Error handling - ensure user selects all options before allowing submission
-
-
-
-
-
-
-
-
-
-
 
 
 
