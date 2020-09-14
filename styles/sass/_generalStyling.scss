@@ -9,14 +9,20 @@ body {
   line-height: 1.5;
 }
 
+.noScroll {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.noScroll::-webkit-scrollbar {
+  display: none;
+}
+
 .wrapper {
   width: 85%;
   max-width: 1280px;
   margin: 0 auto;
-}
-
-section {
-  min-height: 100vh;
 }
 
 ul[class],

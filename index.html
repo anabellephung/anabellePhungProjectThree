@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body class="noScroll">
   <header>
     <div class="wrapper">
       <h1>Build Your Own Skincare Regime</h1>
@@ -16,78 +16,90 @@
     </div>  
   </header>
 
-  <section>
-    <form action="">
-      <div class="wrapper">
-        <fieldset class="typeOfProduct">
-          <p>What type of product are you looking for?</p>
-        
-          <label for="cleanser">Cleanser</label>
-          <input type="radio" name="product" id="cleanser" value="cleanser" checked>
-        
-          <label for="serumOrTreatment">Serum/Treatment</label>
-          <input type="radio" name="product" id="serumOrTreatment" value="serumOrTreatment">
-        
-          <label for="faceCream">Facial Cream</label>
-          <input type="radio" name="product" id="faceCream" value="faceCream">
-        </fieldset>
-
-        <fieldset class="skinType">
-          <p>What is your skin type?</p>
-
-          <label for="oily">Oily</label>
-          <input type="radio" name="type" id="oily" value="oily" checked>
-
-          <label for="dry">Dry</label>
-          <input type="radio" name="type" id="dry" value="dry">
-
-          <label for="sensitive">Sensitive</label>
-          <input type="radio" name="type" id="sensitive" value="sensitive">
+  <section class="quiz">
+    <div class="skincareForm">
+      <form action="">
+        <div class="wrapper">
+          <fieldset class="typeOfProduct">
+            <p>What type of product are you looking for?</p>
           
-          <label for="combination">Combination</label>
-          <input type="radio" name="type" id="combination" value="combination">
+            <label for="cleanser">Cleanser</label>
+            <input type="radio" name="product" id="cleanser" value="cleanser" checked>
+
+            <label for="exfoliator">Exfoliator (Chemical/Physical)</label>
+            <input type="radio" name="product" id="exfoliator" value="exfoliator">
           
-          <label for="normal">Normal</label>
-          <input type="radio" name="type" id="normal" value="normal">
-        </fieldset>
-      </div>  
-
-      <div class="wrapper">
-        <fieldset class="budgetAmount">
-          <p>How much are you willing to spend?</p>
-
-          <label for="cheap">$</label>
-          <input type="radio" name="price" id="cheap" value="$" checked>
-
-          <label for="lessExpensive">$$</label>
-          <input type="radio" name="price" id="lessExpensive" value="$$">
+            <label for="serum">Serum</label>
+            <input type="radio" name="product" id="serum" value="serum">
           
-          <label for="expensive">$$$</label>
-          <input type="radio" name="price" id="expensive" value="$$$">
-        </fieldset>
-      </div>  
+            <label for="faceCream">Facial Cream</label>
+            <input type="radio" name="product" id="faceCream" value="faceCream">
 
-      <div class="wrapper">
-        <fieldset class="skinGoal">
-          <p>What is your ultimate skin goal?</p>
-
-          <label for="brightening">Brightening</label>
-          <input type="radio" name="goal" id="brightening" value="brightening" checked>
-
-          <label for="acne">Acne</label>
-          <input type="radio" name="goal" id="acne" value="acne">
-
-          <label for="anti-aging">Anti-Aging</label>
-          <input type="radio" name="goal" id="anti-aging" value="anti-aging">
-        </fieldset>
-      </div>  
-
-      <div class="wrapper">
-        <div class="submit-container">
-          <input type="submit" value="Get me some skincare!">
+            <label for="sunscreen">Sunscreen</label>
+            <input type="radio" name="product" id="sunscreen" value="sunscreen">
+          </fieldset>
         </div>
-      </div>  
-    </form>
+        <div class="wrapper">
+          <fieldset class="skinType">
+            <p>What is your skin type?</p>
+
+            <label for="oily">Oily</label>
+            <input type="radio" name="type" id="oily" value="oily" checked>
+
+            <label for="dry">Dry</label>
+            <input type="radio" name="type" id="dry" value="dry">
+
+            <label for="sensitive">Sensitive</label>
+            <input type="radio" name="type" id="sensitive" value="sensitive">
+            
+            <label for="combination">Combination</label>
+            <input type="radio" name="type" id="combination" value="combination">
+            
+            <label for="normal">Normal</label>
+            <input type="radio" name="type" id="normal" value="normal">
+          </fieldset>
+        </div>  
+
+        <div class="wrapper">
+          <fieldset class="budgetAmount">
+            <p>How much are you willing to spend?</p>
+
+            <label for="cheap">$</label>
+            <input type="radio" name="price" id="cheap" value="$" checked>
+
+            <label for="lessExpensive">$$</label>
+            <input type="radio" name="price" id="lessExpensive" value="$$">
+            
+            <label for="expensive">$$$</label>
+            <input type="radio" name="price" id="expensive" value="$$$">
+          </fieldset>
+        </div>  
+
+        <div class="wrapper">
+          <fieldset class="skinGoal">
+            <p>What is your ultimate skin goal?</p>
+
+            <label for="hydration">Hydration</label>
+            <input type="radio" name="goal" id="hydration" value="hydration" checked>
+
+            <label for="brightening">Brightening</label>
+            <input type="radio" name="goal" id="brightening" value="brightening">
+
+            <label for="acne">Acne</label>
+            <input type="radio" name="goal" id="acne" value="acne">
+
+            <label for="anti-aging">Anti-Aging</label>
+            <input type="radio" name="goal" id="anti-aging" value="anti-aging">
+          </fieldset>
+        </div>  
+
+        <div class="wrapper">
+          <div class="submit-container">
+            <input id ="getSkincare"type="submit" value="Get me some skincare!">
+          </div>
+        </div>  
+      </form>
+    </div>  
   </section>
 
   <section class="results">

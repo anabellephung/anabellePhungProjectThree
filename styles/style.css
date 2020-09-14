@@ -246,14 +246,20 @@ body {
   line-height: 1.5;
 }
 
+.noScroll {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.noScroll::-webkit-scrollbar {
+  display: none;
+}
+
 .wrapper {
   width: 85%;
   max-width: 1280px;
   margin: 0 auto;
-}
-
-section {
-  min-height: 100vh;
 }
 
 ul[class],
@@ -352,6 +358,11 @@ h2 {
   font-weight: 400;
 }
 
+.errorP {
+  font-family: "Elsie", cursive;
+  font-size: 4rem;
+}
+
 body {
   background: #b695bd;
   color: #0e0b0d;
@@ -381,4 +392,29 @@ header {
 
 header p {
   margin-bottom: 60px;
+}
+
+.quiz {
+  display: none;
+  min-height: 100vh;
+}
+
+.quiz .skincareForm {
+  display: block;
+  text-align: center;
+}
+
+.quiz .skincareForm form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.results {
+  display: none;
+}
+
+.productStyles {
+  min-height: 100vh;
 }
