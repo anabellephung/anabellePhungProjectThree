@@ -534,7 +534,7 @@ function randomProduct(array) {
 const target = $(this).attr('button');
 const smoothScroll = function(target) {
   $('html, body').animate({
-    scrollTop: ($(target).offset().top -100)
+    scrollTop: ($(target).offset().top)
   }, 1500);
 }  
 
@@ -602,9 +602,7 @@ skincareApp.init = function(){
   $('#getSkincare').click(function () {
     $('.results').show();
     $('#skincareProduct').addClass('productStyles');
-    $('html, body').animate({
-      scrollTop: ($('#skincareProduct').offset().top)
-    }, 1500);
+    smoothScroll('#skincareProduct');
   })
 
   // Allow user to start quiz again (clears previous selections)
