@@ -9,13 +9,6 @@ header {
     margin-bottom: 60px;  
   }
 
-  .sparkle {
-    text-shadow: 2px 2px 5px pink;
-    -webkit-animation: sparkling 0.8s linear infinite;
-          animation: sparkling 0.8s linear infinite;
-    animation-play-state: paused;      
-  }
-
   @-webkit-keyframes sparkling {
     0%,
     50%,
@@ -41,11 +34,34 @@ header {
   }
 
   button {
-    &:hover,
-    &:focus {
-      .sparkle {
-        animation-play-state: running;
-      }
+    position: relative;
+    &::before {
+      content: "✨";
+      position: absolute;
+      top: 5px;
+      left: -5px;
+      text-shadow: 2px 2px 5px pink;
+      -webkit-animation: sparkling 0.8s linear infinite;
+      animation: sparkling 0.8s linear infinite;
+      animation-play-state: paused;      
+    }
+
+     &::after {
+      content: "✨";
+      position: absolute;
+      bottom: 5px;
+      right: -5px;
+      text-shadow: 2px 2px 5px pink;
+      -webkit-animation: sparkling 0.8s linear infinite;
+      animation: sparkling 0.8s linear infinite;
+      animation-play-state: paused;  
+    }
+    
+    &:hover::before,
+    &:hover::after,
+    &:focus::before,
+    &:focus::after {
+      animation-play-state: running;
     }
   }
 

@@ -412,14 +412,6 @@ header p {
   margin-bottom: 60px;
 }
 
-header .sparkle {
-  text-shadow: 2px 2px 5px pink;
-  -webkit-animation: sparkling 0.8s linear infinite;
-  animation: sparkling 0.8s linear infinite;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-
 @-webkit-keyframes sparkling {
   0%,
   50%,
@@ -444,7 +436,35 @@ header .sparkle {
   }
 }
 
-header button:hover .sparkle, header button:focus .sparkle {
+header button {
+  position: relative;
+}
+
+header button::before {
+  content: "✨";
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  text-shadow: 2px 2px 5px pink;
+  -webkit-animation: sparkling 0.8s linear infinite;
+  animation: sparkling 0.8s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+header button::after {
+  content: "✨";
+  position: absolute;
+  bottom: 5px;
+  right: -5px;
+  text-shadow: 2px 2px 5px pink;
+  -webkit-animation: sparkling 0.8s linear infinite;
+  animation: sparkling 0.8s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+header button:hover::before, header button:hover::after, header button:focus::before, header button:focus::after {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
