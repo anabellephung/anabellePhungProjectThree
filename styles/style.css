@@ -566,7 +566,7 @@ header button:hover .sparkle, header button:focus .sparkle {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 100%;
   -ms-flex-item-align: center;
       align-self: center;
   text-align: center;
