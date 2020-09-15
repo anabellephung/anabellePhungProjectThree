@@ -602,7 +602,9 @@ skincareApp.init = function(){
   $('#getSkincare').click(function () {
     $('.results').show();
     $('#skincareProduct').addClass('productStyles');
-    smoothScroll('#skincareProduct');
+    $('html, body').animate({
+      scrollTop: ($(target).offset().top)
+    }, 1500);
   })
 
   // Allow user to start quiz again (clears previous selections)
