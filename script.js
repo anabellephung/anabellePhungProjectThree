@@ -538,6 +538,12 @@ const smoothScroll = function(target) {
   }, 1500);
 }  
 
+// Audio on click
+const audio = $("#sparkleSound")[0];
+$("#toQuiz").click(function () {
+  audio.play();
+});
+
 skincareApp.init = function(){
   // Create an event listener for a 'submit' event
   $('form').on('submit', function (e) {
@@ -571,16 +577,18 @@ skincareApp.init = function(){
     // Display randomly chosen product on page in 'skincareProduct' div
     const displayProducts = randomProduct(finalProducts);
     $('#skincareProduct').html(`
-      <h2>${displayProducts.title}</h2>
-      <a href='${displayProducts.whereToBuy}' target='_blank'>Purchase product here!</a>
-      <button id='redo'>Find another product!</button>
+      <div class='skincareProductContents'>
+        <h2>${displayProducts.title}</h2>
+        <a class='purchase' href='${displayProducts.whereToBuy}' target='_blank'>Purchase product here!</a>
+      </div>  
+      <button id='redo' class='redo'>Find another product!</button>
     `);
   });
 
   // Toggle Quiz and scroll down
   $('#toQuiz').click(function () {
     $('form').trigger('reset');
-    $('section').show();
+    $('.quiz').show();
     smoothScroll('fieldset');
   });
 
@@ -592,8 +600,11 @@ skincareApp.init = function(){
   
   // Scroll to skincareProduct div (results)
   $('#getSkincare').click(function () {
-    smoothScroll('#skincareProduct');
-    $('.results').addClass('productStyles')
+    $('.results').show();
+    $('#skincareProduct').addClass('productStyles');
+    $('html, body').animate({
+      scrollTop: ($('#skincareProduct').offset().top)
+    }, 1500);
   })
 
   // Allow user to start quiz again (clears previous selections)

@@ -1,14 +1,17 @@
 .quiz {
   display: none;
   min-height: 100vh;
+
   .skincareForm {
     min-height: 100vh;
+
     .questionBlock {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
+
     fieldset {
       display: flex;
       flex-direction: column;
@@ -16,12 +19,15 @@
       padding: 20px 0;
       box-shadow: 15px 15px #8657b152;
       border: 1px solid #f3ecf3;
+
       span {
         border-bottom: 5px dotted #0e0b0d;
       }
+
       legend {
         margin: 0 auto;
       }
+
       .radio {
         display: inline-block;
         position: relative;
@@ -33,7 +39,6 @@
         }
 
         label {
-          margin-left: 325px;
           cursor: pointer;
           transition: all 0.3s;
         }
@@ -68,24 +73,26 @@
           height: 12px;
           position: absolute;
           top: 14px;
-          left: 335px;
+          left: 10px;
           content: " ";
-          display: block;
+          display: inline-block;
           background: #4b2c78;
         }
+
         input[type=radio]:hover {
           opacity: 0.7;
         }
+
         input[type=radio]:focus {
           opacity: 0.7;
         }
       }
     }
     .nextQuestion {
-        display: flex;
-        flex-direction: column;
-        width: 20%;
-        align-self: center;
-      }
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      align-self: center;
+    }
   }
 }

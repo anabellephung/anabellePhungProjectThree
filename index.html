@@ -58,20 +58,30 @@
           <fieldset class="skinType">
             <legend>What is your <span>skin type</span>?</legend>
 
-            <label for="oily">Oily</label>
-            <input type="radio" name="type" id="oily" value="oily" checked>
+            <div class="radio">
+              <input type="radio" name="type" id="oily" value="oily" checked>
+              <label for="oily">Oily</label>
+            </div>
 
-            <label for="dry">Dry</label>
-            <input type="radio" name="type" id="dry" value="dry">
+            <div class="radio">
+              <input type="radio" name="type" id="dry" value="dry">
+              <label for="dry">Dry</label>
+            </div>  
 
-            <label for="sensitive">Sensitive</label>
-            <input type="radio" name="type" id="sensitive" value="sensitive">
+            <div class="radio">
+              <input type="radio" name="type" id="sensitive" value="sensitive">
+              <label for="sensitive">Sensitive</label>
+            </div>  
+              
+            <div class="radio">
+              <input type="radio" name="type" id="combination" value="combination">
+              <label for="combination">Combination</label>
+            </div>  
             
-            <label for="combination">Combination</label>
-            <input type="radio" name="type" id="combination" value="combination">
-            
-            <label for="normal">Normal</label>
-            <input type="radio" name="type" id="normal" value="normal">
+            <div class="radio">
+              <input type="radio" name="type" id="normal" value="normal">
+              <label for="normal">Normal</label>
+            </div>  
           </fieldset>
           <button class="nextQuestion">Next</button>
         </div>  
@@ -80,14 +90,20 @@
           <fieldset class="budgetAmount">
             <legend>How <span>much</span> are you willing to spend?</legend>
 
-            <label for="cheap">$</label>
-            <input type="radio" name="price" id="cheap" value="$" checked>
+            <div class="radio">
+              <input type="radio" name="price" id="cheap" value="$" checked>
+              <label for="cheap">$</label>
+            </div>  
 
-            <label for="lessExpensive">$$</label>
-            <input type="radio" name="price" id="lessExpensive" value="$$">
+            <div class="radio">
+              <input type="radio" name="price" id="lessExpensive" value="$$">
+              <label for="lessExpensive">$$</label>
+            </div>  
             
-            <label for="expensive">$$$</label>
-            <input type="radio" name="price" id="expensive" value="$$$">
+            <div class="radio">
+              <input type="radio" name="price" id="expensive" value="$$$">
+              <label for="expensive">$$$</label>
+            </div>  
           </fieldset>
           <button class="nextQuestion">Next</button>
         </div>  
@@ -96,17 +112,25 @@
           <fieldset class="skinGoal">
             <legend>What is your current <span>skin concern</span>?</legend>
 
-            <label for="hydration">Hydration</label>
-            <input type="radio" name="goal" id="hydration" value="hydration" checked>
+            <div class="radio">
+              <input type="radio" name="goal" id="hydration" value="hydration" checked>
+              <label for="hydration">Hydration</label>
+            </div>  
 
-            <label for="brightening">Brightening</label>
-            <input type="radio" name="goal" id="brightening" value="brightening">
+            <div class="radio">
+              <input type="radio" name="goal" id="brightening" value="brightening">
+              <label for="brightening">Brightening</label>
+            </div>  
 
-            <label for="acne">Acne</label>
-            <input type="radio" name="goal" id="acne" value="acne">
+            <div class="radio">
+              <input type="radio" name="goal" id="acne" value="acne">
+              <label for="acne">Acne</label>
+            </div>  
 
-            <label for="anti-aging">Anti-Aging</label>
-            <input type="radio" name="goal" id="anti-aging" value="anti-aging">
+            <div class="radio">
+              <input type="radio" name="goal" id="anti-aging" value="anti-aging">
+              <label for="anti-aging">Anti-Aging</label>
+            </div>  
           </fieldset>
           <input id="getSkincare" type="submit" value="Get me some skincare!">
         </div>  
@@ -116,10 +140,13 @@
 
   <section class="results">
     <div class="wrapper">
-      <div id="skincareProduct"></div>
+      <div class="skincareProduct" id="skincareProduct"></div>
     </div>  
   </section>
 
+  <audio id="sparkleSound">
+    <source src="audio/Sparkle-sound-effect.mp3" type="audio/mp3">
+  </audio>
   <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
   <script src="script.js"></script>
 </body>

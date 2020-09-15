@@ -70,12 +70,13 @@ input {
 button,
 input,
 a {
+  text-align: center;
   padding: 20px;
   border-radius: 50px;
   background: linear-gradient(145deg, #c39fca, #a486aa);
   box-shadow:  20px 20px 60px #9b7fa1, 
              -20px -20px 60px #d1abd9;
-  transition: all 0.5s ease-in-out;           
+  transition: all 0.3s ease-in-out;           
 }
 
 button:hover,

@@ -4,5 +4,39 @@
 
 .productStyles {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+}
+
+.skincareProduct {
+  .redo {
+    margin-top: 50px;
+  }
+  .skincareProductContents {
+    padding: 50px;
+    box-shadow: 15px 15px #8657b152;
+    border: 1px solid #f3ecf3;
+    position: relative;
+    &::before {
+      content: '⭐';
+      position: absolute;
+      top: -7%;
+      left: -4%;
+      font-size: clamp(3rem, 3vw, 5rem);
+    }
+    &::after {
+      content: '⭐';
+      position: absolute;
+      bottom: -7%;
+      right: -4%;
+      font-size: clamp(3rem, 3vw, 5rem);
+    }
+    .purchase {
+      text-decoration: none;
+      float: left;
+    }
+  }
 }
 

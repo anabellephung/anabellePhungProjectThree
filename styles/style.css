@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -307,13 +308,14 @@ input {
 button,
 input,
 a {
+  text-align: center;
   padding: 20px;
   border-radius: 50px;
   background: linear-gradient(145deg, #c39fca, #a486aa);
   -webkit-box-shadow: 20px 20px 60px #9b7fa1,  -20px -20px 60px #d1abd9;
           box-shadow: 20px 20px 60px #9b7fa1,  -20px -20px 60px #d1abd9;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover,
@@ -357,26 +359,26 @@ header p {
 }
 
 form legend {
-  font-size: 3rem;
+  font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 700;
   font-style: italic;
   letter-spacing: 4px;
 }
 
 form label {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 400;
   letter-spacing: 4px;
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: clamp(3rem, 3vw, 5rem);
   font-weight: 400;
 }
 
 .errorP {
   font-family: "Elsie", cursive;
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 3vw, 4.5rem);
 }
 
 body {
@@ -505,7 +507,6 @@ header button:hover .sparkle, header button:focus .sparkle {
 }
 
 .quiz .skincareForm fieldset .radio label {
-  margin-left: 325px;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -542,9 +543,9 @@ header button:hover .sparkle, header button:focus .sparkle {
   height: 12px;
   position: absolute;
   top: 14px;
-  left: 335px;
+  left: 10px;
   content: " ";
-  display: block;
+  display: inline-block;
   background: #4b2c78;
 }
 
@@ -564,7 +565,7 @@ header button:hover .sparkle, header button:focus .sparkle {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 20%;
+  width: 50%;
   -ms-flex-item-align: center;
       align-self: center;
 }
@@ -575,4 +576,74 @@ header button:hover .sparkle, header button:focus .sparkle {
 
 .productStyles {
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+}
+
+.skincareProduct .redo {
+  margin-top: 50px;
+}
+
+.skincareProduct .skincareProductContents {
+  padding: 50px;
+  -webkit-box-shadow: 15px 15px #8657b152;
+          box-shadow: 15px 15px #8657b152;
+  border: 1px solid #f3ecf3;
+  position: relative;
+}
+
+.skincareProduct .skincareProductContents::before {
+  content: '⭐';
+  position: absolute;
+  top: -7%;
+  left: -4%;
+  font-size: clamp(3rem, 3vw, 5rem);
+}
+
+.skincareProduct .skincareProductContents::after {
+  content: '⭐';
+  position: absolute;
+  bottom: -7%;
+  right: -4%;
+  font-size: clamp(3rem, 3vw, 5rem);
+}
+
+.skincareProduct .skincareProductContents .purchase {
+  text-decoration: none;
+  float: left;
+}
+
+@media (max-width: 830px) {
+  input[type=radio]:checked + label:after {
+    top: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  input[type=radio]:checked + label:after {
+    top: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  input[type=radio]:checked + label:after {
+    top: 11px;
+  }
+}
+
+@media (max-width: 414px) {
+  input[type=radio]:checked + label:after {
+    top: 6px;
+  }
 }
