@@ -493,6 +493,7 @@ header button:hover .sparkle, header button:focus .sparkle {
 
 .quiz .skincareForm fieldset legend {
   margin: 0 auto;
+  text-align: center;
 }
 
 .quiz .skincareForm fieldset .radio {
