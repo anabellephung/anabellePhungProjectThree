@@ -71,8 +71,21 @@ button,
 input,
 a {
   padding: 20px;
-  border-radius: 20px;
-  background:  linear-gradient(145deg, #c39fca, #a486aa);
-  box-shadow: 13px 13px 27px #9b7fa1, 
-              -13px -13px 27px #d1abd9;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #c39fca, #a486aa);
+  box-shadow:  20px 20px 60px #9b7fa1, 
+             -20px -20px 60px #d1abd9;
+  transition: all 0.5s ease-in-out;           
+}
+
+button:hover,
+input:hover,
+a:hover,
+button:focus,
+input:focus,
+a:focus {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #a486aa, #c39fca);
+  box-shadow:  20px 20px 60px #9b7fa1, 
+             -20px -20px 60px #d1abd9;
 }

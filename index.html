@@ -12,7 +12,11 @@
     <div class="wrapper">
       <h1>Build Your Own Skincare Regime</h1>
       <p>"No matter your personal pronoun, gender, or chosen identity, you deserve to live in your best skin!"</p>
-      <button id="toQuiz">Click here to take the quiz!</button>
+      <button id="toQuiz">
+        <span class="sparkle">✨</span>
+        Click here to take the quiz!
+        <span class="sparkle">✨</span>
+      </button>
     </div>  
   </header>
 
@@ -22,21 +26,31 @@
         <div class="wrapper questionBlock">
           <fieldset class="typeOfProduct">
             <legend>What type of <span>product</span> are you looking for?</legend>
-          
-            <label for="cleanser">Cleanser</label>
-            <input type="radio" name="product" id="cleanser" value="cleanser" checked>
 
-            <label for="exfoliator">Exfoliator</label>
-            <input type="radio" name="product" id="exfoliator" value="exfoliator">
-          
-            <label for="serum">Serum</label>
-            <input type="radio" name="product" id="serum" value="serum">
-          
-            <label for="faceCream">Facial Cream</label>
-            <input type="radio" name="product" id="faceCream" value="faceCream">
+            <div class="radio">
+              <input type="radio" name="product" id="cleanser" value="cleanser" checked>
+              <label for="cleanser">Cleanser</label>
+            </div>
 
-            <label for="sunscreen">Sunscreen</label>
-            <input type="radio" name="product" id="sunscreen" value="sunscreen">
+            <div class="radio">
+              <input type="radio" name="product" id="exfoliator" value="exfoliator">
+              <label for="exfoliator">Exfoliator</label>
+            </div>
+          
+            <div class="radio">
+              <input type="radio" name="product" id="serum" value="serum">
+              <label for="serum">Serum</label>
+            </div>
+          
+            <div class="radio">
+              <input type="radio" name="product" id="faceCream" value="faceCream">
+              <label for="faceCream">Facial Cream</label>
+            </div>
+
+            <div class="radio">
+              <input type="radio" name="product" id="sunscreen" value="sunscreen">
+              <label for="sunscreen">Sunscreen</label>
+            </div>
           </fieldset>
           <button class="nextQuestion">Next</button>
         </div>
@@ -96,12 +110,6 @@
           </fieldset>
           <input id="getSkincare" type="submit" value="Get me some skincare!">
         </div>  
-
-        <!-- <div class="wrapper questionBlock">
-          <div class="submit-container">
-            <input id ="getSkincare" type="submit" value="Get me some skincare!">
-          </div>
-        </div>   -->
       </form>
     </div>  
   </section>

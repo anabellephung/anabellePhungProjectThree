@@ -8,4 +8,46 @@ header {
   p {
     margin-bottom: 60px;  
   }
+
+  .sparkle {
+    text-shadow: 2px 2px 5px pink;
+    -webkit-animation: sparkling 0.8s linear infinite;
+          animation: sparkling 0.8s linear infinite;
+    animation-play-state: paused;      
+  }
+
+  @-webkit-keyframes sparkling {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes sparkling {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+
+  button {
+    &:hover,
+    &:focus {
+      .sparkle {
+        animation-play-state: running;
+      }
+    }
+  }
+
+  
 }

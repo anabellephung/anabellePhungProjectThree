@@ -3,14 +3,15 @@
   min-height: 100vh;
   .skincareForm {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
     .questionBlock {
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     fieldset {
+      display: flex;
+      flex-direction: column;
       margin-bottom: 30px;
       padding: 20px 0;
       box-shadow: 15px 15px #8657b152;
@@ -21,16 +22,70 @@
       legend {
         margin: 0 auto;
       }
-      label {
-        margin-right: 5px;
-      }
+      .radio {
+        display: inline-block;
+        position: relative;
+        padding: 0 6px;
+        margin: 10px 0 0;
 
-      input {
-        margin-right: 10px;
+        input[type='radio'] {
+        display: none;
+        }
+
+        label {
+          margin-left: 325px;
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+
+        label:hover,
+        label:focus {
+          opacity: 0.7;
+        }
+
+        label:before {
+          content: " ";
+          display: inline-block;
+          position: relative;
+          top: 2px;
+          margin-right: 10px;
+          width: 20px;
+          height: 20px;
+          border-radius: 11px;
+          border: 2px solid #4b2c78;
+          background-color: transparent;
+          transition: all 0.3s;
+        }
+
+        label:before:hover,
+        label:before:focus {
+          opacity: 0.7;
+        }
+
+        input[type=radio]:checked + label:after {
+          border-radius: 11px;
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          top: 14px;
+          left: 335px;
+          content: " ";
+          display: block;
+          background: #4b2c78;
+        }
+        input[type=radio]:hover {
+          opacity: 0.7;
+        }
+        input[type=radio]:focus {
+          opacity: 0.7;
+        }
       }
     }
-    input {
-      margin-top: 20px;
-    }
+    .nextQuestion {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        align-self: center;
+      }
   }
 }

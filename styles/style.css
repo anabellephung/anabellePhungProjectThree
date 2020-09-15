@@ -308,10 +308,24 @@ button,
 input,
 a {
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 50px;
   background: linear-gradient(145deg, #c39fca, #a486aa);
-  -webkit-box-shadow: 13px 13px 27px #9b7fa1,  -13px -13px 27px #d1abd9;
-          box-shadow: 13px 13px 27px #9b7fa1,  -13px -13px 27px #d1abd9;
+  -webkit-box-shadow: 20px 20px 60px #9b7fa1,  -20px -20px 60px #d1abd9;
+          box-shadow: 20px 20px 60px #9b7fa1,  -20px -20px 60px #d1abd9;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+button:hover,
+input:hover,
+a:hover,
+button:focus,
+input:focus,
+a:focus {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #a486aa, #c39fca);
+  -webkit-box-shadow: 20px 20px 60px #9b7fa1,  -20px -20px 60px #d1abd9;
+          box-shadow: 20px 20px 60px #9b7fa1,  -20px -20px 60px #d1abd9;
 }
 
 body {
@@ -326,18 +340,18 @@ button,
 input,
 a {
   font-family: "Roboto", sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.6rem, 3vw, 2rem);
   font-weight: 400;
   letter-spacing: 5px;
 }
 
 header h1 {
-  font-size: 7rem;
+  font-size: clamp(4.5rem, 5vw, 7rem);
   font-weight: 900;
 }
 
 header p {
-  font-size: 2.8rem;
+  font-size: clamp(2rem, 3vw, 2.8rem);
   font-weight: 300;
   font-style: italic;
 }
@@ -352,7 +366,7 @@ form legend {
 form label {
   font-size: 2.5rem;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
 h2 {
@@ -396,12 +410,53 @@ header p {
   margin-bottom: 60px;
 }
 
+header .sparkle {
+  text-shadow: 2px 2px 5px pink;
+  -webkit-animation: sparkling 0.8s linear infinite;
+  animation: sparkling 0.8s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes sparkling {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes sparkling {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+header button:hover .sparkle, header button:focus .sparkle {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
 .quiz {
   display: none;
   min-height: 100vh;
 }
 
 .quiz .skincareForm {
+  min-height: 100vh;
+}
+
+.quiz .skincareForm .questionBlock {
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -413,14 +468,16 @@ header p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
-}
-
-.quiz .skincareForm .questionBlock {
-  min-height: 100vh;
 }
 
 .quiz .skincareForm fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 30px;
   padding: 20px 0;
   -webkit-box-shadow: 15px 15px #8657b152;
@@ -436,16 +493,80 @@ header p {
   margin: 0 auto;
 }
 
-.quiz .skincareForm fieldset label {
-  margin-right: 5px;
+.quiz .skincareForm fieldset .radio {
+  display: inline-block;
+  position: relative;
+  padding: 0 6px;
+  margin: 10px 0 0;
 }
 
-.quiz .skincareForm fieldset input {
+.quiz .skincareForm fieldset .radio input[type='radio'] {
+  display: none;
+}
+
+.quiz .skincareForm fieldset .radio label {
+  margin-left: 325px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.quiz .skincareForm fieldset .radio label:hover,
+.quiz .skincareForm fieldset .radio label:focus {
+  opacity: 0.7;
+}
+
+.quiz .skincareForm fieldset .radio label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 2px;
   margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 11px;
+  border: 2px solid #4b2c78;
+  background-color: transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.quiz .skincareForm input {
-  margin-top: 20px;
+.quiz .skincareForm fieldset .radio label:before:hover,
+.quiz .skincareForm fieldset .radio label:before:focus {
+  opacity: 0.7;
+}
+
+.quiz .skincareForm fieldset .radio input[type=radio]:checked + label:after {
+  border-radius: 11px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 14px;
+  left: 335px;
+  content: " ";
+  display: block;
+  background: #4b2c78;
+}
+
+.quiz .skincareForm fieldset .radio input[type=radio]:hover {
+  opacity: 0.7;
+}
+
+.quiz .skincareForm fieldset .radio input[type=radio]:focus {
+  opacity: 0.7;
+}
+
+.quiz .skincareForm .nextQuestion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .results {
