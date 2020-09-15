@@ -569,6 +569,7 @@ header button:hover .sparkle, header button:focus .sparkle {
   width: 50%;
   -ms-flex-item-align: center;
       align-self: center;
+  text-align: center;
 }
 
 .results {
