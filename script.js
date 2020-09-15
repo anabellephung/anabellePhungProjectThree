@@ -534,7 +534,7 @@ function randomProduct(array) {
 const target = $(this).attr('button');
 const smoothScroll = function(target) {
   $('html, body').animate({
-    scrollTop: ($(target).offset().top)
+    scrollTop: ($(target).offset().top -50)
   }, 1500);
 }  
 
