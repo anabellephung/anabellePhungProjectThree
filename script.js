@@ -603,7 +603,7 @@ skincareApp.init = function(){
     $('.results').show();
     $('#skincareProduct').addClass('productStyles');
     $('html, body').animate({
-      scrollTop: ($(target).offset().top)
+      scrollTop: ($('#skincareProduct').offset().top)
     }, 1500);
   })
 
