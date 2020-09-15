@@ -524,8 +524,6 @@ const skincareProducts = {
 
 const skincareApp = {};
 
-// PSEUDO CODE:
-
 // If there is more than one skincare product based on user's input, then create a random selector for which product will result
 function randomProduct(array) {
   const randomIndex = Math.floor(Math.random() * array.length);
@@ -533,74 +531,76 @@ function randomProduct(array) {
 }
 
 // scrollTop function
-const smoothScroll= function() {
-  $('html,body').animate({
-    scrollTop: $('section').offset().top
-  }, 1000);
-}
-
-// Create an event listener for a 'submit' event
-$('form').on('submit', function(e) {
-  e.preventDefault();
-  // Saving user input (from checked radio buttons) into variables
-  // Skin Type (oily, dry, sensitive, combination, normal), Budget ($, $$, $$$), Skin Goal (brightening, acne, anti-aging)
-  const chosenProduct = $('input[name=product]:checked').val();
-  const skincareType = $('input[name=type]:checked').val();
-  const budgetToSpend = $('input[name=price]:checked').val();
-  const skincareGoal = $('input[name=goal]:checked').val();
-  // Determine correspondence of user input with options in object 'skincareProducts'
-    // E.g. Oily -> $$ -> acne = 'cleanser', 'serum/treatment', 'facial cream'
-  const products = skincareProducts[chosenProduct];
-  
-  const finalProducts = [];
-  products.forEach((product) => {
-    const type = product.skinType.includes(skincareType)
-    const goal = product.skinGoal.includes(skincareGoal)
-    if (type && goal && budgetToSpend === product.price) {
-       finalProducts.push(product);
-     }
-     // Error handling - if product does not match user input
-     else {
-       $('#skincareProduct').html(`
-       <p class='errorP'>Sorry, but we couldn't generate a product you were looking for ...please try again!</p>
-       <button id='redo' class='button'>Find <span>another</span> product!</button>
-       `)
-     }
-  })
-  
-  // Display randomly chosen product on page in 'skincareProduct' div
-  const displayProducts = randomProduct(finalProducts);
-  $('#skincareProduct').html(`
-  <h2>${displayProducts.title}</h2>
-  <a href='${displayProducts.whereToBuy}' target='_blank'>Purchase product here!</a>
-  <button id='redo' class='button'>Find another product!</button>
-  `);
-});
-
-// Toggle Quiz and scroll down
-$('#toQuiz').click(function () {
-  $('form').trigger('reset');
-  $('section').show();
-  smoothScroll();
-});
-
-//Scroll to skincareProduct div (results)
-$('#getSkincare').click(function () {
-  $('html,body').animate({
-    scrollTop: $("#skincareProduct").offset().top
-  }, 1000);
-  $('.results').addClass('productStyles')
-})
-
-// Allow user to start quiz again (clears previous selections)
-$('#skincareProduct').on('click', '#redo', function () {
-  $('form').trigger('reset');
-  $('section').fadeOut(600, 'linear');
-});
-
+const target = $(this).attr('button');
+const smoothScroll = function(target) {
+  $('html, body').animate({
+    scrollTop: ($(target).offset().top)
+  }, 1500);
+}  
 
 skincareApp.init = function(){
+  // Create an event listener for a 'submit' event
+  $('form').on('submit', function (e) {
+    e.preventDefault();
+    // Saving user input (from checked radio buttons) into variables
+    // Skin Type (oily, dry, sensitive, combination, normal), Budget ($, $$, $$$), Skin Goal (brightening, acne, anti-aging)
+    const chosenProduct = $('input[name=product]:checked').val();
+    const skincareType = $('input[name=type]:checked').val();
+    const budgetToSpend = $('input[name=price]:checked').val();
+    const skincareGoal = $('input[name=goal]:checked').val();
+    // Determine correspondence of user input with options in object 'skincareProducts'
+    // E.g. Oily -> $$ -> acne = 'cleanser', 'serum/treatment', 'facial cream'
+    const products = skincareProducts[chosenProduct];
 
+    const finalProducts = [];
+    products.forEach((product) => {
+      const type = product.skinType.includes(skincareType)
+      const goal = product.skinGoal.includes(skincareGoal)
+      if (type && goal && budgetToSpend === product.price) {
+        finalProducts.push(product);
+      }
+      // Error handling - if product does not match user input
+      else {
+        $('#skincareProduct').html(`
+          <p class='errorP'>Sorry, but we couldn't generate a product you were looking for ...please try again!</p>
+          <button id='redo'>Find <span>another</span> product!</button>
+        `)
+      }
+    })
+
+    // Display randomly chosen product on page in 'skincareProduct' div
+    const displayProducts = randomProduct(finalProducts);
+    $('#skincareProduct').html(`
+      <h2>${displayProducts.title}</h2>
+      <a href='${displayProducts.whereToBuy}' target='_blank'>Purchase product here!</a>
+      <button id='redo'>Find another product!</button>
+    `);
+  });
+
+  // Toggle Quiz and scroll down
+  $('#toQuiz').click(function () {
+    $('form').trigger('reset');
+    $('section').show();
+    smoothScroll('fieldset');
+  });
+
+  // Scroll to next question
+  $('.nextQuestion').click(function () {
+    const next = $(this).parent().next().find('fieldset');
+    smoothScroll(next);
+  });
+  
+  // Scroll to skincareProduct div (results)
+  $('#getSkincare').click(function () {
+    smoothScroll('#skincareProduct');
+    $('.results').addClass('productStyles')
+  })
+
+  // Allow user to start quiz again (clears previous selections)
+  $('#skincareProduct').on('click', '#redo', function () {
+    $('form').trigger('reset');
+    $('section').fadeOut(600, 'linear');
+  });
 }
 
 $(function(){

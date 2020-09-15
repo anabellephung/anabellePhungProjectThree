@@ -7,6 +7,9 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    .questionBlock {
+      min-height: 100vh;
+    }
     fieldset {
       margin-bottom: 30px;
       padding: 20px 0;
@@ -15,11 +18,15 @@
       span {
         border-bottom: 5px dotted #0e0b0d;
       }
-      p {
-        margin-bottom: 10px;
+      legend {
+        margin: 0 auto;
       }
       label {
-        margin: 0 5px 0 20px;
+        margin-right: 5px;
+      }
+
+      input {
+        margin-right: 10px;
       }
     }
     input {

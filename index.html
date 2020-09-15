@@ -19,9 +19,9 @@
   <section class="quiz">
     <div class="skincareForm">
       <form action="">
-        <div class="wrapper">
+        <div class="wrapper questionBlock">
           <fieldset class="typeOfProduct">
-            <p>What type of <span>product</span> are you looking for?</p>
+            <legend>What type of <span>product</span> are you looking for?</legend>
           
             <label for="cleanser">Cleanser</label>
             <input type="radio" name="product" id="cleanser" value="cleanser" checked>
@@ -38,10 +38,11 @@
             <label for="sunscreen">Sunscreen</label>
             <input type="radio" name="product" id="sunscreen" value="sunscreen">
           </fieldset>
+          <button class="nextQuestion">Next</button>
         </div>
-        <div class="wrapper">
+        <div class="wrapper questionBlock">
           <fieldset class="skinType">
-            <p>What is your <span>skin type</span>?</p>
+            <legend>What is your <span>skin type</span>?</legend>
 
             <label for="oily">Oily</label>
             <input type="radio" name="type" id="oily" value="oily" checked>
@@ -58,11 +59,12 @@
             <label for="normal">Normal</label>
             <input type="radio" name="type" id="normal" value="normal">
           </fieldset>
+          <button class="nextQuestion">Next</button>
         </div>  
 
-        <div class="wrapper">
+        <div class="wrapper questionBlock">
           <fieldset class="budgetAmount">
-            <p>How <span>much</span> are you willing to spend?</p>
+            <legend>How <span>much</span> are you willing to spend?</legend>
 
             <label for="cheap">$</label>
             <input type="radio" name="price" id="cheap" value="$" checked>
@@ -73,11 +75,12 @@
             <label for="expensive">$$$</label>
             <input type="radio" name="price" id="expensive" value="$$$">
           </fieldset>
+          <button class="nextQuestion">Next</button>
         </div>  
 
-        <div class="wrapper">
+        <div class="wrapper questionBlock">
           <fieldset class="skinGoal">
-            <p>What is your ultimate <span>skin goal</span>?</p>
+            <legend>What is your current <span>skin concern</span>?</legend>
 
             <label for="hydration">Hydration</label>
             <input type="radio" name="goal" id="hydration" value="hydration" checked>
@@ -91,13 +94,14 @@
             <label for="anti-aging">Anti-Aging</label>
             <input type="radio" name="goal" id="anti-aging" value="anti-aging">
           </fieldset>
+          <input id="getSkincare" type="submit" value="Get me some skincare!">
         </div>  
 
-        <div class="wrapper">
+        <!-- <div class="wrapper questionBlock">
           <div class="submit-container">
-            <input id ="getSkincare"type="submit" value="Get me some skincare!">
+            <input id ="getSkincare" type="submit" value="Get me some skincare!">
           </div>
-        </div>  
+        </div>   -->
       </form>
     </div>  
   </section>

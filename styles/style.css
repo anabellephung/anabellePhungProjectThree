@@ -314,46 +314,6 @@ a {
           box-shadow: 13px 13px 27px #9b7fa1,  -13px -13px 27px #d1abd9;
 }
 
-button:after,
-input:after,
-a:after {
-  content: "";
-  position: absolute;
-  top: -110%;
-  left: -210%;
-  width: 200%;
-  height: 200%;
-  opacity: 0;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
-  background: rgba(255, 255, 255, 0.13);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.13)), color-stop(77%, rgba(255, 255, 255, 0.13)), color-stop(92%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0) 100%);
-}
-
-button:hover:after,
-button:focus:after,
-input:hover:after,
-input:focus:after,
-a:hover:after,
-a:focus:after {
-  opacity: 1;
-  top: -30%;
-  left: -30%;
-  -webkit-transition-property: left, top, opacity;
-  transition-property: left, top, opacity;
-  -webkit-transition-duration: 0.7s, 0.7s, 0.15s;
-          transition-duration: 0.7s, 0.7s, 0.15s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-}
-
-button:active:after,
-input:active:after,
-a:active:after {
-  opacity: 0;
-}
-
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -368,7 +328,7 @@ a {
   font-family: "Roboto", sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
 }
 
 header h1 {
@@ -382,7 +342,7 @@ header p {
   font-style: italic;
 }
 
-form p {
+form legend {
   font-size: 3rem;
   font-weight: 700;
   font-style: italic;
@@ -456,6 +416,10 @@ header p {
   text-align: center;
 }
 
+.quiz .skincareForm .questionBlock {
+  min-height: 100vh;
+}
+
 .quiz .skincareForm fieldset {
   margin-bottom: 30px;
   padding: 20px 0;
@@ -468,12 +432,16 @@ header p {
   border-bottom: 5px dotted #0e0b0d;
 }
 
-.quiz .skincareForm fieldset p {
-  margin-bottom: 10px;
+.quiz .skincareForm fieldset legend {
+  margin: 0 auto;
 }
 
 .quiz .skincareForm fieldset label {
-  margin: 0 5px 0 20px;
+  margin-right: 5px;
+}
+
+.quiz .skincareForm fieldset input {
+  margin-right: 10px;
 }
 
 .quiz .skincareForm input {
