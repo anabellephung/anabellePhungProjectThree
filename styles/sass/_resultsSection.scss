@@ -15,6 +15,11 @@
     margin-top: 50px;
   }
   .skincareProductContents {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     padding: 50px;
     box-shadow: 15px 15px #8657b152;
     border: 1px solid #f3ecf3;

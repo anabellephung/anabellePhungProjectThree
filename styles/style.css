@@ -299,14 +299,12 @@ img {
   display: block;
 }
 
-button,
-input {
+button {
   cursor: pointer;
   border: none;
 }
 
 button,
-input,
 a {
   text-align: center;
   padding: 20px;
@@ -318,11 +316,8 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-button:hover,
-input:hover,
+button:hover, button:focus,
 a:hover,
-button:focus,
-input:focus,
 a:focus {
   border-radius: 50px;
   background: linear-gradient(145deg, #a486aa, #c39fca);
@@ -619,6 +614,20 @@ header button:hover::before, header button:hover::after, header button:focus::be
 }
 
 .skincareProduct .skincareProductContents {
+  min-height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 50px;
   -webkit-box-shadow: 15px 15px #8657b152;
           box-shadow: 15px 15px #8657b152;

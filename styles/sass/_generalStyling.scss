@@ -61,14 +61,12 @@ img {
   display: block;
 }
 
-button,
-input {
+button {
   cursor: pointer;
   border: none;
 }
 
 button,
-input,
 a {
   text-align: center;
   padding: 20px;
@@ -76,17 +74,15 @@ a {
   background: linear-gradient(145deg, #c39fca, #a486aa);
   box-shadow:  20px 20px 60px #9b7fa1, 
              -20px -20px 60px #d1abd9;
-  transition: all 0.3s ease-in-out;           
+  transition: all 0.3s ease-in-out;       
+  
+  &:hover,
+  &:focus {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #a486aa, #c39fca);
+    box-shadow:  20px 20px 60px #9b7fa1, 
+             -20px -20px 60px #d1abd9;
+  }
 }
 
-button:hover,
-input:hover,
-a:hover,
-button:focus,
-input:focus,
-a:focus {
-  border-radius: 50px;
-  background: linear-gradient(145deg, #a486aa, #c39fca);
-  box-shadow:  20px 20px 60px #9b7fa1, 
-             -20px -20px 60px #d1abd9;
-}
+
