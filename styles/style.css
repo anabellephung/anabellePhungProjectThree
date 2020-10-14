@@ -518,7 +518,6 @@ header button:hover::before, header button:hover::after, header button:focus::be
 
 .quiz .skincareForm fieldset .radio {
   display: inline-block;
-  position: relative;
   padding: 0 6px;
   margin: 10px 0 0;
 }
@@ -529,6 +528,13 @@ header button:hover::before, header button:hover::after, header button:focus::be
 
 .quiz .skincareForm fieldset .radio label {
   cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -540,9 +546,7 @@ header button:hover::before, header button:hover::after, header button:focus::be
 
 .quiz .skincareForm fieldset .radio label:before {
   content: " ";
-  display: inline-block;
   position: relative;
-  top: 2px;
   margin-right: 10px;
   width: 20px;
   height: 20px;
@@ -563,10 +567,8 @@ header button:hover::before, header button:hover::after, header button:focus::be
   width: 12px;
   height: 12px;
   position: absolute;
-  top: 14px;
-  left: 10px;
+  left: 4px;
   content: " ";
-  display: inline-block;
   background: #4b2c78;
 }
 
@@ -627,17 +629,19 @@ header button:hover::before, header button:hover::after, header button:focus::be
 .skincareProduct .skincareProductContents::before {
   content: '⭐';
   position: absolute;
-  top: -7%;
-  left: -4%;
+  top: -1%;
+  left: 0;
   font-size: clamp(3rem, 3vw, 5rem);
+  text-shadow: 2px 2px 1px #49028a;
 }
 
 .skincareProduct .skincareProductContents::after {
   content: '⭐';
   position: absolute;
-  bottom: -7%;
-  right: -4%;
+  bottom: -1%;
+  right: 0;
   font-size: clamp(3rem, 3vw, 5rem);
+  text-shadow: 2px 2px 1px #49028a;
 }
 
 .skincareProduct .skincareProductContents .purchase {
@@ -645,26 +649,7 @@ header button:hover::before, header button:hover::after, header button:focus::be
   float: left;
 }
 
-@media (max-width: 830px) {
-  input[type=radio]:checked + label:after {
-    top: 14px;
-  }
-}
-
-@media (max-width: 800px) {
-  input[type=radio]:checked + label:after {
-    top: 13px;
-  }
-}
-
-@media (max-width: 768px) {
-  input[type=radio]:checked + label:after {
-    top: 11px;
-  }
-}
-
-@media (max-width: 414px) {
-  input[type=radio]:checked + label:after {
-    top: 6px;
-  }
+.skincareProduct .skincareProductContents .errorP {
+  margin-bottom: 40px;
+  text-align: center;
 }

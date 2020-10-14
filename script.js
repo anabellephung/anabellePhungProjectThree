@@ -1,4 +1,4 @@
-const skincareProducts = {
+const skincareApp = {
   cleanser: [
     {
       title: 'La Mer The Cleansing Oil',
@@ -103,7 +103,7 @@ const skincareProducts = {
       skinGoal: ['hydration', 'brightening', 'acne'],
       whereToBuy: 'https://www.glossier.com/products/milky-jelly-cleanser'
     },
-    
+
     {
       title: 'CeraVe Hydrating Facial Cleanser',
       price: '$',
@@ -522,8 +522,6 @@ const skincareProducts = {
   ]
 };
 
-const skincareApp = {};
-
 // If there is more than one skincare product based on user's input, then create a random selector for which product will result
 function randomProduct(array) {
   const randomIndex = Math.floor(Math.random() * array.length);
@@ -534,8 +532,8 @@ function randomProduct(array) {
 const target = $(this).attr('button');
 const smoothScroll = function(target) {
   $('html, body').animate({
-    scrollTop: ($(target).offset().top -50)
-  }, 1500);
+    scrollTop: ($(target).offset().top -213)
+  }, 1000);
 }  
 
 // Audio on click
@@ -556,7 +554,7 @@ skincareApp.init = function(){
     const skincareGoal = $('input[name=goal]:checked').val();
     // Determine correspondence of user input with options in object 'skincareProducts'
     // E.g. Oily -> $$ -> acne = 'cleanser', 'serum/treatment', 'facial cream'
-    const products = skincareProducts[chosenProduct];
+    const products = skincareApp[chosenProduct];
 
     const finalProducts = [];
     products.forEach((product) => {

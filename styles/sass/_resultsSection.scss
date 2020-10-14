@@ -22,20 +22,27 @@
     &::before {
       content: '⭐';
       position: absolute;
-      top: -7%;
-      left: -4%;
+      top: -1%;
+      left: 0;
       font-size: clamp(3rem, 3vw, 5rem);
+      text-shadow: 2px 2px 1px #49028a;
     }
     &::after {
       content: '⭐';
       position: absolute;
-      bottom: -7%;
-      right: -4%;
+      bottom: -1%;
+      right: 0;
       font-size: clamp(3rem, 3vw, 5rem);
+      text-shadow: 2px 2px 1px #49028a;
     }
     .purchase {
       text-decoration: none;
       float: left;
+    }
+
+    .errorP {
+      margin-bottom: 40px;
+      text-align: center;
     }
   }
 }
