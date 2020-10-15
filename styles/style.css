@@ -488,6 +488,13 @@ header button:hover::before, header button:hover::after, header button:focus::be
           justify-content: center;
 }
 
+.quiz .skincareForm img {
+  height: 300px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
 .quiz .skincareForm fieldset {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -665,7 +672,7 @@ header button:hover::before, header button:hover::after, header button:focus::be
 }
 
 .skincareProduct .skincareProductContents img {
-  width: 300px;
+  width: auto;
   height: 375px;
   margin: 5px 0 20px 0;
   border-radius: 50%;
@@ -675,6 +682,6 @@ header button:hover::before, header button:hover::after, header button:focus::be
 
 @media (max-width: 440px) {
   .skincareProduct .skincareProductContents img {
-    height: 300px;
+    height: auto;
   }
 }

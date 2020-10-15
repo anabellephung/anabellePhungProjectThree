@@ -474,7 +474,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['anit-aging'],
       whereToBuy: 'https://www.tatcha.com/product/SPF35.html',
-      image: './styles/assets/sunscreenImgs/'
+      image: './styles/assets/sunscreenImgs/tatcha.jpg'
     },
 
     {
@@ -483,7 +483,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://geebeauty.ca/products/eltamd-uv-sport-broad-spectrum-spf-50-3-oz',
-      image: './styles/assets/sunscreenImgs/'
+      image: './styles/assets/sunscreenImgs/elta.jpg'
     },
 
     {
@@ -492,7 +492,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.ulta.com/ultimate-sun-protector-lotion-spf-50-sunscreen?productId=pimprod2014585',
-      image: './styles/assets/sunscreenImgs/'
+      image: './styles/assets/sunscreenImgs/shishedo.jpg'
     },
 
     {
@@ -501,7 +501,7 @@ const skincareApp = {
       skinType: ['oily', 'sensitive', 'combination'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://us.drjart.com/products/every-sun-day-mineral-sunscreen-spf-50',
-      image: './styles/assets/sunscreenImgs/'
+      image: './styles/assets/sunscreenImgs/drJart.jph'
     },
 
     {
@@ -510,7 +510,7 @@ const skincareApp = {
       skinType: ['combination'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.revolve.com/supergoop-glowscreen-spf/dp/SOOR-WU63/',
-      image: './styles/assets/sunscreenImgs/'
+      image: './styles/assets/sunscreenImgs/supergoop.jpg'
     },
 
     {
@@ -519,16 +519,16 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration'],
       whereToBuy: 'https://sokoglam.com/products/neogen-day-light-sun-protection-sun-screen',
-      image: './styles/assets/sunscreenImgs/'
+      image: './styles/assets/sunscreenImgs/neogen.jpg'
     },
 
     {
-      title: 'NEOGEN Day-Light Protection Sun Screen SPF 50/PA+++',
+      title: 'COSRX Shield Fit Snail Essence Sun',
       price: '$$',
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'anti-aging'],
       whereToBuy: 'https://sukoshimart.com/collections/sun-protection/products/cosrx-shield-fit-snail-essence-sun',
-      image: './styles/assets/sunscreenImgs/'
+      image: './styles/assets/sunscreenImgs/cosrx.jpg'
     },
 
     {
@@ -537,7 +537,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.amazon.com/Biossance-Squalane-Sheer-Mineral-Sunscreen/dp/B086JDWK9C',
-      image: './styles/assets/sunscreenImgs/'
+      image: './styles/assets/sunscreenImgs/biossance.jpeg'
     },
 
     {
@@ -546,7 +546,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'acne', 'anti-aging'],
       whereToBuy: 'https://sokoglam.com/products/dr-oracle-a-thera-sunblock-spf-50',
-      image: './styles/assets/sunscreenImgs/'
+      image: './styles/assets/sunscreenImgs/drOracle.jpg'
     },
 
     {
@@ -555,7 +555,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://sukoshimart.com/collections/sun-protection/products/a-pieu-pure-block-daily-sun-cream',
-      image: './styles/assets/sunscreenImgs/'
+      image: './styles/assets/sunscreenImgs/apieu.jpg'
     },
 
     {
@@ -564,7 +564,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://sukoshimart.com/products/purito-centella-green-level-unscented-sun',
-      image: './styles/assets/sunscreenImgs/'
+      image: './styles/assets/sunscreenImgs/purito.jpg'
     },
 
     {
@@ -573,7 +573,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.amazon.com/Alba-Facial-Sheer-Shield-Sunscreen/dp/B07NSWGYT9',
-      image: './styles/assets/sunscreenImgs/'
+      image: './styles/assets/sunscreenImgs/alba.jpg'
     },
 
     {
@@ -582,7 +582,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.amazon.com/CeraVe-Sunscreen-Hydrating-Mineral-Titanium/dp/B07YLKXV11',
-      image: './styles/assets/sunscreenImgs/'
+      image: './styles/assets/sunscreenImgs/ceraVe.jpg'
     },
   ]
 };
@@ -597,7 +597,7 @@ function randomProduct(array) {
 const target = $(this).attr('button');
 const smoothScroll = function(target) {
   $('html, body').animate({
-    scrollTop: ($(target).offset().top -213)
+    scrollTop: ($(target).offset().top -385)
   }, 1000);
 }  
 
@@ -642,7 +642,7 @@ skincareApp.init = function(){
     $('#skincareProduct').html(`
       <div class='skincareProductContents'>
         <h2>${displayProducts.title}</h2>
-        <img src='${displayProducts.image}'>
+        <img src='${displayProducts.image}' alt='${displayProducts.title}'>
         <a class='purchase' href='${displayProducts.whereToBuy}' target='_blank'>Purchase product here!</a>
       </div>  
       <button id='redo' class='redo'>Find another product!</button>
