@@ -367,8 +367,9 @@ form label {
 }
 
 h2 {
-  font-size: clamp(3rem, 3vw, 5rem);
+  font-size: clamp(2.5rem, 3vw, 5rem);
   font-weight: 400;
+  text-align: center;
 }
 
 .errorP {
@@ -530,13 +531,13 @@ header button:hover::before, header button:hover::after, header button:focus::be
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: text-shadow 0.3s ease-in-out;
+  transition: text-shadow 0.3s ease-in-out;
 }
 
 .quiz .skincareForm fieldset .radio label:hover,
 .quiz .skincareForm fieldset .radio label:focus {
-  opacity: 0.7;
+  text-shadow: 2px 2px 3px #ecc3ff;
 }
 
 .quiz .skincareForm fieldset .radio label:before {
@@ -661,4 +662,19 @@ header button:hover::before, header button:hover::after, header button:focus::be
 .skincareProduct .skincareProductContents .errorP {
   margin-bottom: 40px;
   text-align: center;
+}
+
+.skincareProduct .skincareProductContents img {
+  width: 300px;
+  height: 375px;
+  margin: 5px 0 20px 0;
+  border-radius: 50%;
+  -webkit-box-shadow: 5px 5px 5px;
+          box-shadow: 5px 5px 5px;
+}
+
+@media (max-width: 440px) {
+  .skincareProduct .skincareProductContents img {
+    height: 300px;
+  }
 }

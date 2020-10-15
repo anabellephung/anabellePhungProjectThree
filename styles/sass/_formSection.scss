@@ -43,12 +43,12 @@
           position: relative;
           display: flex;
           align-items: center;
-          transition: all 0.3s;
+          transition: text-shadow 0.3s ease-in-out;
         }
 
         label:hover,
         label:focus {
-          opacity: 0.7;
+          text-shadow: 2px 2px 3px #ecc3ff;
         }
 
         label:before {

@@ -5,7 +5,8 @@ const skincareApp = {
       price: '$$$',
       skinType: ['oily', 'dry', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'aging'],
-      whereToBuy: 'https://www.sephora.com/ca/en/product/the-cleansing-oil-P424126'
+      whereToBuy: 'https://www.sephora.com/ca/en/product/the-cleansing-oil-P424126',
+      image: './styles/assets/cleanserImgs/laMer.jpeg'
     },
 
     {
@@ -13,7 +14,8 @@ const skincareApp = {
       price: '$$$',
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['brightening', 'acne', 'anti-aging'],
-      whereToBuy: 'https://www.theskingirls.ca/collections/is-clinical/products/cleansing-complex-180ml-1'
+      whereToBuy: 'https://www.theskingirls.ca/collections/is-clinical/products/cleansing-complex-180ml-1',
+      image:'./styles/assets/cleanserImgs/isClinical.jpeg'
     },
 
     {
@@ -21,7 +23,8 @@ const skincareApp = {
       price: '$$$',
       skinType: ['oily', 'dry', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'aging'],
-      whereToBuy: ['https://www.sephora.com/ca/en/product/gentle-cleansing-oil-P450633']
+      whereToBuy: ['https://www.sephora.com/ca/en/product/gentle-cleansing-oil-P450633'],
+      image: './styles/assets/cleanserImgs/sulwhasoo.jpg'
     },
 
     {
@@ -29,7 +32,8 @@ const skincareApp = {
       price: '$$',
       skinType: ['dry', 'oily', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
-      whereToBuy: 'https://www.youthtothepeople.com/products/superfood-face-cleanser'
+      whereToBuy: 'https://www.youthtothepeople.com/products/superfood-face-cleanser',
+      image: './styles/assets/cleanserImgs/yttp.jpg'
     },
 
     {
@@ -37,7 +41,8 @@ const skincareApp = {
       price: '$$',
       skinType: ['oily', 'sensitive', 'combination', 'normal'],
       skinGoal: ['brightening', 'acne'],
-      whereToBuy: 'https://www.sephora.com/ca/en/product/the-deep-cleanse-P427536'
+      whereToBuy: 'https://www.sephora.com/ca/en/product/the-deep-cleanse-P427536',
+      image: './styles/assets/cleanserImgs/tatcha.jpg'
     },
 
     {
@@ -45,7 +50,8 @@ const skincareApp = {
       price: '$$',
       skinType: ['dry', 'oily', 'combination', 'normal'],
       skinGoal: ['brightening', 'acne'],
-      whereToBuy: 'https://www.sephora.com/ca/en/product/squalane-tea-tree-cleansing-gel-P442549'
+      whereToBuy: 'https://www.sephora.com/ca/en/product/squalane-tea-tree-cleansing-gel-P442549',
+      image: './styles/assets/cleanserImgs/biossance.jpg'
     },
 
     {
@@ -53,7 +59,8 @@ const skincareApp = {
       price: '$$',
       skinType: ['dry', 'sensitive'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
-      whereToBuy: 'https://www.reneerouleau.com/collections/cleansers/products/moisture-protecting-cleanser'
+      whereToBuy: 'https://www.reneerouleau.com/collections/cleansers/products/moisture-protecting-cleanser',
+      image: './styles/assets/cleanserImgs/rr.jpg'
     },
 
     {
@@ -61,7 +68,8 @@ const skincareApp = {
       price: '$$',
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'anti-aging'],
-      whereToBuy: 'https://sokoglam.com/products/then-i-met-you-living-cleansing-balm'
+      whereToBuy: 'https://sokoglam.com/products/then-i-met-you-living-cleansing-balm',
+      image: './styles/assets/cleanserImgs/timy.jpg'
     },
 
     {
@@ -69,7 +77,8 @@ const skincareApp = {
       price: '$$',
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['brightening', 'acne', 'anti-aging'],
-      whereToBuy: 'https://www.ulta.com/power-calm-hydrating-gel-cleanser?productId=pimprod2004468'
+      whereToBuy: 'https://www.ulta.com/power-calm-hydrating-gel-cleanser?productId=pimprod2004468',
+      image: './styles/assets/cleanserImgs/p&l.jpg'
     },
 
     {
@@ -77,7 +86,8 @@ const skincareApp = {
       price: '$$',
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'anti-aging'],
-      whereToBuy: 'https://www.amazon.ca/DHC-Deep-Cleansing-Fluid-Ounce/dp/B001UE60E0'
+      whereToBuy: 'https://www.amazon.ca/DHC-Deep-Cleansing-Fluid-Ounce/dp/B001UE60E0',
+      image: './styles/assets/cleanserImgs/dhc.jpg'
     },
 
     {
@@ -85,7 +95,8 @@ const skincareApp = {
       price: '$$',
       skinType: ['dry', 'combination', 'normal'],
       skinGoal: ['brightening', 'acne'],
-      whereToBuy: 'https://www.sephora.com/ca/en/product/face-cleanser-P248404'
+      whereToBuy: 'https://www.sephora.com/ca/en/product/face-cleanser-P248404',
+      image: './styles/assets/cleanserImgs/fab.png'
     },
 
     {
@@ -93,7 +104,8 @@ const skincareApp = {
       price: '$',
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne'],
-      whereToBuy: 'https://www.chuusi.ca/products/banila-co-clean-it-zero-original'
+      whereToBuy: 'https://www.chuusi.ca/products/banila-co-clean-it-zero-original',
+      image: './styles/assets/cleanserImgs/banila.jpg'
     },
 
     {
@@ -101,7 +113,8 @@ const skincareApp = {
       price: '$',
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne'],
-      whereToBuy: 'https://www.glossier.com/products/milky-jelly-cleanser'
+      whereToBuy: 'https://www.glossier.com/products/milky-jelly-cleanser',
+      image: './styles/assets/cleanserImgs/glossier.jpeg'
     },
 
     {
@@ -109,7 +122,8 @@ const skincareApp = {
       price: '$',
       skinType: ['dry', 'sensitive', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
-      whereToBuy: 'https://beauty.shoppersdrugmart.ca/Beauty/Categories/Natural-Beauty/Skin-Care/Cleansers/Hydrating-Cleanser/p/BB_3606000531833?variantCode=3606000546349'
+      whereToBuy: 'https://beauty.shoppersdrugmart.ca/Beauty/Categories/Natural-Beauty/Skin-Care/Cleansers/Hydrating-Cleanser/p/BB_3606000531833?variantCode=3606000546349',
+      image: './styles/assets/cleanserImgs/ceraVeHydr.jpg'
     },
 
     {
@@ -118,6 +132,7 @@ const skincareApp = {
       skinType: ['sensitive'],
       skinGoal: ['brightening', 'acne'],
       whereToBuy: 'https://www.walmart.ca/en/ip/cerave-salicylic-acid-cleanser-for-rough-bumpy-skin-fragrance-free/6000199756542',
+      image: './styles/assets/cleanserImgs/ceraVeSali.jpg'
     },
 
     {
@@ -125,7 +140,8 @@ const skincareApp = {
       price: '$',
       skinType: ['dry', 'sensitive', 'normal'],
       skinGoal: ['brightening', 'acne', 'anti-aging'],
-      whereToBuy: 'https://www.walmart.ca/en/ip/cetaphil-gentle-skin-cleanser/6000188115636'
+      whereToBuy: 'https://www.walmart.ca/en/ip/cetaphil-gentle-skin-cleanser/6000188115636',
+      image: './styles/assets/cleanserImgs/cetaphil.jpg'
     }
   ],
 
@@ -136,6 +152,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'combination', 'normal'],
       skinGoal: ['brightening', 'anti-aging'],
       whereToBuy: 'https://www.sephora.com/ca/en/product/good-genes-all-in-one-lactic-acid-treatment-P422670',
+      image: './styles/assets/exfoliatorImgs/sr.jpg'
     },
 
     {
@@ -144,6 +161,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'anti-aging'],
       whereToBuy: 'https://www.sephora.com/ca/en/product/polished-rice-enzyme-powder-P426340',
+      image: './styles/assets/exfoliatorImgs/tatcha.jpg'
     },
 
     {
@@ -152,6 +170,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'combination', 'normal'],
       skinGoal: ['brightening', 'anti-aging'],
       whereToBuy: 'https://www.sephora.com/ca/en/product/exfolikate-intensive-exfoliating-treatment-P232915',
+      image: './styles/assets/exfoliatorImgs/ks.jpg'
     },
 
     {
@@ -160,6 +179,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.drunkelephant.com/products/t-l-c-sukari-babyfacial-mask',
+      image: './styles/assets/exfoliatorImgs/de.jpg'
     },
 
     {
@@ -168,6 +188,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'combination', 'normal'],
       skinGoal: ['brightening', 'anti-aging'],
       whereToBuy: 'https://www.skinceuticals.ca/en/micro-exfoliating-scrub/3606000468665.html',
+      image: './styles/assets/exfoliatorImgs/sc.jpg'
     },
 
     {
@@ -176,6 +197,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://sokoglam.com/collections/chemical-exfoliators/products/neogen-bio-peel-gauze-peeling-green-tea',
+      image: './styles/assets/exfoliatorImgs/ng.jpg'
     },
 
     {
@@ -184,6 +206,7 @@ const skincareApp = {
       skinType: ['oily', 'combination', 'normal'],
       skinGoal: ['brightening'],
       whereToBuy: 'https://www.sephora.com/ca/en/product/ginzing-refreshing-scrub-cleanser-P386197?skuId=1596527&icid2=seop_7_title',
+      image: './styles/assets/exfoliatorImgs/origins.jpg'
     },
 
     {
@@ -192,6 +215,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.paulaschoice.com/skin-perfecting-2pct-bha-liquid-exfoliant/201.html',
+      image: './styles/assets/exfoliatorImgs/pcBHA.jpg'
     },
 
     {
@@ -200,6 +224,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['acne', 'anti-aging'],
       whereToBuy: 'https://www.drmtlgy.com/products/microdermabrasion-scrub',
+      image: './styles/assets/exfoliatorImgs/drmtlgy.jpeg'
     },
 
     {
@@ -208,6 +233,7 @@ const skincareApp = {
       skinType: ['sensitive'],
       skinGoal: ['brightening', 'acne'],
       whereToBuy: 'https://www.theinkeylist.com/products/pha-toner',
+      image: './styles/assets/exfoliatorImgs/inkey.jpg'
     },
 
     {
@@ -216,6 +242,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne'],
       whereToBuy: 'https://theordinary.deciem.com/product/rdn-niacinamide-10pct-zinc-1pct-30ml?ccvis=1',
+      image: './styles/assets/exfoliatorImgs/ordinaryNiac.jpg'
     },
 
     {
@@ -224,6 +251,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['brightening'],
       whereToBuy: 'https://www.sephora.com/ca/en/product/the-ordinary-deciem-alpha-arbutin-2-ha-P427412',
+      image: './styles/assets/exfoliatorImgs/ordinaryArbu.jpg'
     }
   ],
 
@@ -234,14 +262,17 @@ const skincareApp = {
       skinType: ['dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'aging'],
       whereToBuy: 'https://www.dermstore.com/product_C+E+Ferulic_5230.htm',
+      image: './styles/assets/serumImgs/sc.jpg'
+      
     },
 
     {
-      title: 'Squalane + Phyto-Retinol Serum',
+      title: 'Biossance Squalane + Phyto-Retinol Serum',
       price: '$$$',
       skinType: ['oily', 'dry', 'combination', 'normal'],
       skinGoal: ['hydration', 'anti-aging'],
       whereToBuy: 'https://www.sephora.com/product/squalane-phyto-retinol-serum-P429028',
+      image: './styles/assets/serumImgs/biossance.jpg'
     },
 
     {
@@ -249,7 +280,8 @@ const skincareApp = {
       price: '$$$',
       skinType: ['oily', 'combination'],
       skinGoal: ['acne'],
-      whereToBuy: 'https://www.sephora.com/ca/en/product/vinopure-natural-salicylic-acid-pore-minimizing-serum-P433626'
+      whereToBuy: 'https://www.sephora.com/ca/en/product/vinopure-natural-salicylic-acid-pore-minimizing-serum-P433626',
+      image: './styles/assets/serumImgs/caudalie.jpg'
     },
 
     {
@@ -258,6 +290,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'combination', 'normal'],
       skinGoal: ['acne'],
       whereToBuy: 'https://www.sephora.com/product/tiger-grass-re-pair-serum-P423259',
+      image: './styles/assets/serumImgs/drJart.jpg'
     },
 
     {
@@ -266,6 +299,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'combination', 'normal'],
       skinGoal: ['brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://sokoglam.com/collections/serum-ampoule/products/benton-snail-bee-ultimate-serum',
+      image: './styles/assets/serumImgs/benton.jpeg'
     },
 
     {
@@ -274,6 +308,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'anti-aging'],
       whereToBuy: 'https://www.mikaela-beauty.com/products/klairs-freshly-juiced-vitamin-drop',
+      image: './styles/assets/serumImgs/klairs.jpg'
     },
 
     {
@@ -282,6 +317,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.glossier.com/products/super-pure',
+      image: './styles/assets/serumImgs/glossier.jpg'
     },
 
     {
@@ -290,6 +326,7 @@ const skincareApp = {
       skinType: ['dry', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://sokoglam.com/collections/beauty-of-joseon/products/beauty-of-joseon-repair-serum',
+      image: './styles/assets/serumImgs/boj.jpg'
     },
 
     {
@@ -298,6 +335,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['brightening', 'anti-aging'],
       whereToBuy: 'https://www.theinkeylist.com/products/q10',
+      image: './styles/assets/serumImgs/ceraVe.jpg'
     },
 
     {
@@ -306,6 +344,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'anti-aging'],
       whereToBuy: 'https://www.theinkeylist.com/products/q10',
+      image: './styles/assets/serumImgs/inkey.jpg'
     },
   ],
 
@@ -316,6 +355,7 @@ const skincareApp = {
       skinType: ['dry'],
       skinGoal: ['hydration', 'anti-aging'],
       whereToBuy: 'https://www.sephora.com/ca/en/product/creme-de-la-mer-moisturizing-cream-P416341?icid2=products%20grid:p416341',
+      image: './styles/assets/creamImgs/laMer.png'
     },
 
     {
@@ -324,6 +364,7 @@ const skincareApp = {
       skinType: ['dry', 'sensitive', 'normal'],
       skinGoal: ['hydration', 'anti-aging'],
       whereToBuy: 'https://www.sephora.com/product/r-n-a-power-radical-new-age-cream-P405950',
+      image: './styles/assets/creamImgs/skII.jpg'
     },
 
     {
@@ -332,6 +373,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.sephora.com/ca/en/product/protini-tm-polypeptide-cream-P427421',
+      image: './styles/assets/creamImgs/de.jpg'
     },
 
     {
@@ -340,6 +382,7 @@ const skincareApp = {
       skinType: ['oily', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'anti-aging'],
       whereToBuy: 'https://www.sephora.com/ca/en/product/the-water-cream-P418218',
+      image: './styles/assets/creamImgs/tatcha.jpg'
     },
 
     {
@@ -348,6 +391,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening'],
       whereToBuy: 'https://www.sephora.com/ca/en/product/rose-deep-hydration-face-cream-P406686',
+      image: './styles/assets/creamImgs/fresh.jpg'
     },
 
     {
@@ -356,6 +400,7 @@ const skincareApp = {
       skinType: ['oily', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://sokoglam.com/products/then-i-met-you-calming-tide-gel-cream',
+      image: './styles/assets/creamImgs/timy.jpg'
     },
 
     {
@@ -364,6 +409,7 @@ const skincareApp = {
       skinType: ['oily', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://sokoglam.com/products/then-i-met-you-calming-tide-gel-cream',
+      image: './styles/assets/creamImgs/avene.png'
     },
 
     {
@@ -372,6 +418,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['brightening', 'anti-aging'],
       whereToBuy: 'https://sukoshimart.com/products/etude-house-moistfull-collagen-cream',
+      image: './styles/assets/creamImgs/etude.jpg'
     },
 
     {
@@ -380,6 +427,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'anti-aging'],
       whereToBuy: 'https://www.firstaidbeauty.com/skin-care-products/moisturizers/ultra-repair-cream',
+      image: './styles/assets/creamImgs/fab.jpg'
     },
 
     {
@@ -388,6 +436,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening'],
       whereToBuy: 'https://www.walmart.ca/en/ip/cerave-moisturizing-cream/6000105907280',
+      image: './styles/assets/creamImgs/ceraVe.jpg'
     },
 
     {
@@ -396,6 +445,7 @@ const skincareApp = {
       skinType: ['dry'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.walmart.ca/en/ip/neutrogena-hydro-boost-facial-gel-cream-with-hyaluronic-acid/6000192034944',
+      image: './styles/assets/creamImgs/neutrogena.jpg'
     },
 
     {
@@ -404,6 +454,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration'],
       whereToBuy: 'https://www.walmart.ca/en/ip/cetaphil-daily-hydrating-lotion/6000198008661',
+      image: './styles/assets/creamImgs/ordinary.jpg'
     },
 
     {
@@ -412,6 +463,7 @@ const skincareApp = {
       skinType: ['sensitive'],
       skinGoal: ['hydration', 'brightening', 'acne'],
       whereToBuy: 'https://www.walmart.ca/en/ip/cetaphil-daily-hydrating-lotion/6000198008661',
+      image: './styles/assets/creamImgs/cetaphil.jpg'
     },
   ],
 
@@ -422,6 +474,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['anit-aging'],
       whereToBuy: 'https://www.tatcha.com/product/SPF35.html',
+      image: './styles/assets/sunscreenImgs/'
     },
 
     {
@@ -430,6 +483,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://geebeauty.ca/products/eltamd-uv-sport-broad-spectrum-spf-50-3-oz',
+      image: './styles/assets/sunscreenImgs/'
     },
 
     {
@@ -438,6 +492,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.ulta.com/ultimate-sun-protector-lotion-spf-50-sunscreen?productId=pimprod2014585',
+      image: './styles/assets/sunscreenImgs/'
     },
 
     {
@@ -446,6 +501,7 @@ const skincareApp = {
       skinType: ['oily', 'sensitive', 'combination'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://us.drjart.com/products/every-sun-day-mineral-sunscreen-spf-50',
+      image: './styles/assets/sunscreenImgs/'
     },
 
     {
@@ -454,6 +510,7 @@ const skincareApp = {
       skinType: ['combination'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.revolve.com/supergoop-glowscreen-spf/dp/SOOR-WU63/',
+      image: './styles/assets/sunscreenImgs/'
     },
 
     {
@@ -462,6 +519,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration'],
       whereToBuy: 'https://sokoglam.com/products/neogen-day-light-sun-protection-sun-screen',
+      image: './styles/assets/sunscreenImgs/'
     },
 
     {
@@ -470,6 +528,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'anti-aging'],
       whereToBuy: 'https://sukoshimart.com/collections/sun-protection/products/cosrx-shield-fit-snail-essence-sun',
+      image: './styles/assets/sunscreenImgs/'
     },
 
     {
@@ -478,6 +537,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.amazon.com/Biossance-Squalane-Sheer-Mineral-Sunscreen/dp/B086JDWK9C',
+      image: './styles/assets/sunscreenImgs/'
     },
 
     {
@@ -486,6 +546,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'acne', 'anti-aging'],
       whereToBuy: 'https://sokoglam.com/products/dr-oracle-a-thera-sunblock-spf-50',
+      image: './styles/assets/sunscreenImgs/'
     },
 
     {
@@ -494,6 +555,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://sukoshimart.com/collections/sun-protection/products/a-pieu-pure-block-daily-sun-cream',
+      image: './styles/assets/sunscreenImgs/'
     },
 
     {
@@ -502,6 +564,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://sukoshimart.com/products/purito-centella-green-level-unscented-sun',
+      image: './styles/assets/sunscreenImgs/'
     },
 
     {
@@ -510,6 +573,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.amazon.com/Alba-Facial-Sheer-Shield-Sunscreen/dp/B07NSWGYT9',
+      image: './styles/assets/sunscreenImgs/'
     },
 
     {
@@ -518,6 +582,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'sensitive', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'acne', 'anti-aging'],
       whereToBuy: 'https://www.amazon.com/CeraVe-Sunscreen-Hydrating-Mineral-Titanium/dp/B07YLKXV11',
+      image: './styles/assets/sunscreenImgs/'
     },
   ]
 };
@@ -577,6 +642,7 @@ skincareApp.init = function(){
     $('#skincareProduct').html(`
       <div class='skincareProductContents'>
         <h2>${displayProducts.title}</h2>
+        <img src='${displayProducts.image}'>
         <a class='purchase' href='${displayProducts.whereToBuy}' target='_blank'>Purchase product here!</a>
       </div>  
       <button id='redo' class='redo'>Find another product!</button>
