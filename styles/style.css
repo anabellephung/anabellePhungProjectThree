@@ -375,6 +375,8 @@ h2 {
 .errorP {
   font-family: "Elsie", cursive;
   font-size: clamp(2.5rem, 3vw, 4.5rem);
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 body {
@@ -646,7 +648,7 @@ header button:hover::before, header button:hover::after, header button:focus::be
 .skincareProduct .skincareProductContents::before {
   content: '⭐';
   position: absolute;
-  top: -1%;
+  top: 0;
   left: 0;
   font-size: clamp(3rem, 3vw, 5rem);
   text-shadow: 2px 2px 1px #49028a;
@@ -655,7 +657,7 @@ header button:hover::before, header button:hover::after, header button:focus::be
 .skincareProduct .skincareProductContents::after {
   content: '⭐';
   position: absolute;
-  bottom: -1%;
+  bottom: 0;
   right: 0;
   font-size: clamp(3rem, 3vw, 5rem);
   text-shadow: 2px 2px 1px #49028a;
@@ -664,11 +666,6 @@ header button:hover::before, header button:hover::after, header button:focus::be
 .skincareProduct .skincareProductContents .purchase {
   text-decoration: none;
   float: left;
-}
-
-.skincareProduct .skincareProductContents .errorP {
-  margin-bottom: 40px;
-  text-align: center;
 }
 
 .skincareProduct .skincareProductContents img {

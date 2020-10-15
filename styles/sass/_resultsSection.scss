@@ -27,7 +27,7 @@
     &::before {
       content: '⭐';
       position: absolute;
-      top: -1%;
+      top: 0;
       left: 0;
       font-size: clamp(3rem, 3vw, 5rem);
       text-shadow: 2px 2px 1px #49028a;
@@ -35,7 +35,7 @@
     &::after {
       content: '⭐';
       position: absolute;
-      bottom: -1%;
+      bottom: 0;
       right: 0;
       font-size: clamp(3rem, 3vw, 5rem);
       text-shadow: 2px 2px 1px #49028a;
@@ -43,11 +43,6 @@
     .purchase {
       text-decoration: none;
       float: left;
-    }
-
-    .errorP {
-      margin-bottom: 40px;
-      text-align: center;
     }
 
     img {
