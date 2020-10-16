@@ -6,7 +6,7 @@ const skincareApp = {
       skinType: ['oily', 'dry', 'combination', 'normal'],
       skinGoal: ['hydration', 'brightening', 'aging'],
       whereToBuy: 'https://www.sephora.com/ca/en/product/the-cleansing-oil-P424126',
-      image: './styles/assets/cleanserImgs/laMer.jpeg'
+      image: './styles/assets/cleanserImgs/laMer.jpg'
     },
 
     {
@@ -597,7 +597,7 @@ function randomProduct(array) {
 const target = $(this).attr('button');
 const smoothScroll = function(target) {
   $('html, body').animate({
-    scrollTop: ($(target).offset().top -385)
+    scrollTop: ($(target).offset().top)
   }, 1000);
 }  
 
@@ -643,7 +643,7 @@ skincareApp.init = function(){
       <div class='skincareProductContents'>
         <h2>${displayProducts.title}</h2>
         <img src='${displayProducts.image}' alt='${displayProducts.title}'>
-        <a class='purchase' href='${displayProducts.whereToBuy}' target='_blank'>Purchase product here!</a>
+        <a class='purchase' href='${displayProducts.whereToBuy}' target='_blank'>Purchase here!</a>
       </div>  
       <button id='redo' class='redo'>Find another product!</button>
     `);
@@ -653,27 +653,32 @@ skincareApp.init = function(){
   $('#toQuiz').click(function () {
     $('form').trigger('reset');
     $('.quiz').show();
-    smoothScroll('fieldset');
+    smoothScroll('.questionBlock');
   });
 
   // Scroll to next question
-  $('.nextQuestion').click(function () {
-    const next = $(this).parent().next().find('fieldset');
-    smoothScroll(next);
+  let i = 0;
+  $('.nextQuestion').on('click', function () {
+    i++;
+    if (i > 3) {
+      i = 1;
+    };
+    
+    const offset = $(".questionBlock").eq(i)
+    smoothScroll(offset);
   });
   
   // Scroll to skincareProduct div (results)
   $('#getSkincare').click(function () {
     $('.results').show();
     $('#skincareProduct').addClass('productStyles');
-    $('html, body').animate({
-      scrollTop: ($('#skincareProduct').offset().top)
-    }, 1500);
+    smoothScroll('.results')
   })
 
   // Allow user to start quiz again (clears previous selections)
   $('#skincareProduct').on('click', '#redo', function () {
     $('form').trigger('reset');
+    let i = 0
     $('section').fadeOut(600, 'linear');
   });
 }

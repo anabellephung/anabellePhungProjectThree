@@ -469,14 +469,9 @@ header button:hover::before, header button:hover::after, header button:focus::be
 
 .quiz {
   display: none;
-  min-height: 100vh;
 }
 
-.quiz .skincareForm {
-  min-height: 100vh;
-}
-
-.quiz .skincareForm .questionBlock {
+.quiz form .questionBlock {
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -490,14 +485,14 @@ header button:hover::before, header button:hover::after, header button:focus::be
           justify-content: center;
 }
 
-.quiz .skincareForm img {
-  height: 300px;
+.quiz form img {
+  height: 350px;
   border-radius: 5px;
   margin-bottom: 20px;
   opacity: 0.5;
 }
 
-.quiz .skincareForm fieldset {
+.quiz form fieldset {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,26 +507,26 @@ header button:hover::before, header button:hover::after, header button:focus::be
   border: 1px solid #f3ecf3;
 }
 
-.quiz .skincareForm fieldset span {
+.quiz form fieldset span {
   border-bottom: 5px dotted #0e0b0d;
 }
 
-.quiz .skincareForm fieldset legend {
+.quiz form fieldset legend {
   margin: 0 auto;
   text-align: center;
 }
 
-.quiz .skincareForm fieldset .radio {
+.quiz form fieldset .radio {
   display: inline-block;
   padding: 0 6px;
   margin: 10px 0 0;
 }
 
-.quiz .skincareForm fieldset .radio input[type='radio'] {
+.quiz form fieldset .radio input[type='radio'] {
   display: none;
 }
 
-.quiz .skincareForm fieldset .radio label {
+.quiz form fieldset .radio label {
   cursor: pointer;
   position: relative;
   display: -webkit-box;
@@ -544,12 +539,12 @@ header button:hover::before, header button:hover::after, header button:focus::be
   transition: text-shadow 0.3s ease-in-out;
 }
 
-.quiz .skincareForm fieldset .radio label:hover,
-.quiz .skincareForm fieldset .radio label:focus {
+.quiz form fieldset .radio label:hover,
+.quiz form fieldset .radio label:focus {
   text-shadow: 2px 2px 3px #ecc3ff;
 }
 
-.quiz .skincareForm fieldset .radio label:before {
+.quiz form fieldset .radio label:before {
   content: " ";
   position: relative;
   margin-right: 10px;
@@ -562,12 +557,12 @@ header button:hover::before, header button:hover::after, header button:focus::be
   transition: all 0.3s;
 }
 
-.quiz .skincareForm fieldset .radio label:before:hover,
-.quiz .skincareForm fieldset .radio label:before:focus {
+.quiz form fieldset .radio label:before:hover,
+.quiz form fieldset .radio label:before:focus {
   opacity: 0.7;
 }
 
-.quiz .skincareForm fieldset .radio input[type=radio]:checked + label:after {
+.quiz form fieldset .radio input[type=radio]:checked + label:after {
   border-radius: 11px;
   width: 12px;
   height: 12px;
@@ -577,15 +572,15 @@ header button:hover::before, header button:hover::after, header button:focus::be
   background: #4b2c78;
 }
 
-.quiz .skincareForm fieldset .radio input[type=radio]:hover {
+.quiz form fieldset .radio input[type=radio]:hover {
   opacity: 0.7;
 }
 
-.quiz .skincareForm fieldset .radio input[type=radio]:focus {
+.quiz form fieldset .radio input[type=radio]:focus {
   opacity: 0.7;
 }
 
-.quiz .skincareForm .nextQuestion {
+.quiz form .nextQuestion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -624,7 +619,6 @@ header button:hover::before, header button:hover::after, header button:focus::be
 }
 
 .skincareProduct .skincareProductContents {
-  min-height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,8 +671,31 @@ header button:hover::before, header button:hover::after, header button:focus::be
           box-shadow: 5px 5px 5px;
 }
 
+@media (max-height: 667px) {
+  .skincareForm button,
+  .skincareForm a {
+    margin-bottom: 50px;
+  }
+  .results button {
+    margin-bottom: 10px;
+  }
+}
+
 @media (max-width: 440px) {
   .skincareProduct .skincareProductContents img {
     height: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .quiz .skincareForm img {
+    width: 75%;
+    height: 75%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .skincareProduct .skincareProductContents {
+    padding: 30px;
   }
 }
