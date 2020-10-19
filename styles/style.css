@@ -325,6 +325,22 @@ a:focus {
           box-shadow: 20px 20px 60px #9b7fa1,  -20px -20px 60px #d1abd9;
 }
 
+.swal-modal {
+  background: #b695bd;
+}
+
+.swal-text {
+  letter-spacing: 3px;
+  text-align: center;
+  color: #0e0b0d;
+  text-shadow: 1px 1px 1px #f7f0f0;
+}
+
+.swal-content__input {
+  background: #f7f0f0;
+  text-shadow: 1px 1px 1px #b695bd;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -535,12 +551,13 @@ header button:hover::before, header button:hover::after, header button:focus::be
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: text-shadow 0.3s ease-in-out;
-  transition: text-shadow 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .quiz form fieldset .radio label:hover,
 .quiz form fieldset .radio label:focus {
+  color: #f3ecf3;
   text-shadow: 2px 2px 3px #ecc3ff;
 }
 
@@ -570,6 +587,10 @@ header button:hover::before, header button:hover::after, header button:focus::be
   left: 4px;
   content: " ";
   background: #4b2c78;
+}
+
+.quiz form fieldset .radio label:after:hover, .quiz form fieldset .radio label:after:focus, .quiz form fieldset .radio label:after:active {
+  background: #7b5aad;
 }
 
 .quiz form fieldset .radio input[type=radio]:hover {

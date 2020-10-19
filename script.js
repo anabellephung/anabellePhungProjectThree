@@ -602,8 +602,8 @@ const smoothScroll = function(target) {
 }  
 
 // Audio on click
-const audio = $("#sparkleSound")[0];
-$("#toQuiz").click(function () {
+const audio = $('#sparkleSound')[0];
+$('#toQuiz').click(function () {
   audio.play();
 });
 
@@ -657,15 +657,8 @@ skincareApp.init = function(){
   });
 
   // Scroll to next question
-  let i = 0;
   $('.nextQuestion').on('click', function () {
-    i++;
-    if (i > 3) {
-      i = 1;
-    };
-    
-    const offset = $(".questionBlock").eq(i)
-    smoothScroll(offset);
+    smoothScroll($(this).parent().next());
   });
   
   // Scroll to skincareProduct div (results)
@@ -678,11 +671,16 @@ skincareApp.init = function(){
   // Allow user to start quiz again (clears previous selections)
   $('#skincareProduct').on('click', '#redo', function () {
     $('form').trigger('reset');
-    let i = 0
     $('section').fadeOut(600, 'linear');
   });
 }
 
 $(function(){
+  swal("👋Welcome! What is your name?", {
+    content: "input",
+  })
+    .then((value) => {
+      swal(`✨Hello ${value}! Hope you find the perfect skincare product you have been searching for! Remember that skincare is self-care, so live your best life!✨`);
+    });
   skincareApp.init();
 });

@@ -39,7 +39,7 @@
         margin: 10px 0 0;
 
         input[type='radio'] {
-        display: none;
+          display: none;  
         }
 
         label {
@@ -47,11 +47,12 @@
           position: relative;
           display: flex;
           align-items: center;
-          transition: text-shadow 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
         }
 
         label:hover,
         label:focus {
+          color: #f3ecf3;
           text-shadow: 2px 2px 3px #ecc3ff;
         }
 
@@ -80,6 +81,14 @@
           left: 4px;
           content: " ";
           background: #4b2c78;
+        }
+
+        label:after {
+          &:hover,
+          &:focus,
+          &:active {
+            background: #7b5aad;
+          }
         }
 
         input[type=radio]:hover {
