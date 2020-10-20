@@ -1,8 +1,8 @@
 @import 'setup';
-@import 'generalStyling';
-@import 'fonts';
-@import 'colors';
+@import 'variables';
+@import 'mixins';
+@import 'generalStyles';
 @import 'header';
-@import 'formSection';
-@import 'resultsSection';
+@import 'form';
+@import 'results';
 @import 'mediaQueries';

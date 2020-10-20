@@ -236,6 +236,57 @@ html {
   overflow: hidden;
 }
 
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -244,7 +295,11 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
   line-height: 1.5;
+  background: #b695bd;
+  color: #0e0b0d;
 }
 
 .noScroll {
@@ -263,49 +318,16 @@ body {
   margin: 0 auto;
 }
 
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-ul[class],
-ol[class] {
-  list-style: none;
-}
-
-a:not([class]) {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-button {
-  cursor: pointer;
-  border: none;
+h1, h2, .errorP {
+  font-family: "Elsie", cursive;
 }
 
 button,
 a {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 5px;
   text-align: center;
   padding: 20px;
   border-radius: 50px;
@@ -325,86 +347,31 @@ a:focus {
           box-shadow: 20px 20px 60px #9b7fa1,  -20px -20px 60px #d1abd9;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  color: #0e0b0d;
+}
+
 .swal-modal {
   background: #b695bd;
 }
 
 .swal-text {
   letter-spacing: 3px;
+  line-height: 1.8;
   text-align: center;
   color: #0e0b0d;
-  text-shadow: 1px 1px 1px #f7f0f0;
+  text-shadow: 1px 1px 1px #f3ecf3;
 }
 
 .swal-content__input {
-  background: #f7f0f0;
+  letter-spacing: 3px;
+  background: #f3ecf3;
   text-shadow: 1px 1px 1px #b695bd;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-}
-
-h1, h2 {
-  font-family: "Elsie", cursive;
-}
-
-button,
-input,
-a {
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1.6rem, 3vw, 2rem);
-  font-weight: 400;
-  letter-spacing: 5px;
-}
-
-header h1 {
-  font-size: clamp(4.5rem, 5vw, 7rem);
-  font-weight: 900;
-}
-
-header p {
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 300;
-  font-style: italic;
-}
-
-form legend {
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 700;
-  font-style: italic;
-  letter-spacing: 4px;
-}
-
-form label {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  font-weight: 400;
-  letter-spacing: 4px;
-}
-
-h2 {
-  font-size: clamp(2.5rem, 3vw, 5rem);
-  font-weight: 400;
-  text-align: center;
-}
-
-.errorP {
-  font-family: "Elsie", cursive;
-  font-size: clamp(2.5rem, 3vw, 4.5rem);
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-body {
-  background: #b695bd;
-  color: #0e0b0d;
-}
-
-button,
-input,
-a {
-  background-color: #b695bd;
-  color: #0e0b0d;
 }
 
 header {
@@ -419,11 +386,22 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
+header h1 {
+  font-size: clamp(4.5rem, 5vw, 7rem);
+  font-weight: 900;
+}
+
 header p {
-  margin-bottom: 60px;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 300;
+  font-style: italic;
+  margin: 5px 0 60px 0;
 }
 
 @-webkit-keyframes sparkling {
@@ -483,15 +461,9 @@ header button:hover::before, header button:hover::after, header button:focus::be
           animation-play-state: running;
 }
 
-.quiz {
-  display: none;
-}
-
 .quiz form .questionBlock {
+  display: none;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -528,6 +500,10 @@ header button:hover::before, header button:hover::after, header button:focus::be
 }
 
 .quiz form fieldset legend {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 4px;
   margin: 0 auto;
   text-align: center;
 }
@@ -543,6 +519,9 @@ header button:hover::before, header button:hover::after, header button:focus::be
 }
 
 .quiz form fieldset .radio label {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: 4px;
   cursor: pointer;
   position: relative;
   display: -webkit-box;
@@ -618,6 +597,18 @@ header button:hover::before, header button:hover::after, header button:focus::be
   display: none;
 }
 
+.results h2 {
+  font-size: clamp(2.5rem, 3vw, 5rem);
+  font-weight: 400;
+  text-align: center;
+}
+
+.results .errorP {
+  font-size: clamp(2.5rem, 3vw, 4.5rem);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
 .productStyles {
   min-height: 100vh;
   display: -webkit-box;
@@ -647,9 +638,9 @@ header button:hover::before, header button:hover::after, header button:focus::be
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -692,13 +683,30 @@ header button:hover::before, header button:hover::after, header button:focus::be
           box-shadow: 5px 5px 5px;
 }
 
-@media (max-height: 667px) {
-  .skincareForm button,
-  .skincareForm a {
+@media (max-height: 850px) and (min-width: 800px) {
+  .quiz form img {
+    width: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media (max-height: 850px) {
+  .questionBlock {
     margin-bottom: 50px;
   }
+  .quiz form img {
+    height: 200px;
+  }
+}
+
+@media (max-height: 667px) {
   .results button {
     margin-bottom: 10px;
+  }
+  .skincareProduct .skincareProductContents img {
+    height: 250px;
   }
 }
 

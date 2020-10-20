@@ -1,5 +1,17 @@
 .results {
   display: none;
+
+  h2 {
+    font-size: clamp(2.5rem, 3vw, 5rem);
+    font-weight: $regular;
+    text-align: center;
+  }
+
+  .errorP {
+    font-size: clamp(2.5rem, 3vw, 4.5rem);
+    margin-bottom: 50px;
+    text-align: center;
+  }
 }
 
 .productStyles {
@@ -15,10 +27,7 @@
     margin-top: 50px;
   }
   .skincareProductContents {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-center-column;
     padding: 50px;
     box-shadow: 15px 15px #8657b152;
     border: 1px solid #f3ecf3;

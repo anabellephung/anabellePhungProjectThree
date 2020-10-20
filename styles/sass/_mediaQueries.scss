@@ -1,19 +1,33 @@
-@media (max-height: 667px) {
-  .skincareForm button,
-  .skincareForm a {
-    margin-bottom: 50px;
-  }
-
-  .results button {
-    margin-bottom: 10px;
+@media (max-height: 850px) and (min-width: 800px) {
+  .quiz form img {
+    width: 50%;
+    align-self: center;
   }
 }
 
-@media (max-width: 440px) {
-  .skincareProduct {
-    .skincareProductContents img {
-      height: auto;
+@media (max-height: 850px) {
+  .questionBlock {
+    margin-bottom: 50px;
+  }
+
+  .quiz form img {
+    height: 200px;
+  }
+}
+
+@media (max-height: 667px) {
+  .results button {
+    margin-bottom: 10px;
+  }
+
+  .skincareProduct .skincareProductContents img {
+      height: 250px;
     }
+}
+
+@media (max-width: 440px) {
+  .skincareProduct .skincareProductContents img {
+    height: auto;
   }
 }
 

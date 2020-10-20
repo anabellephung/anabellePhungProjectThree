@@ -607,6 +607,18 @@ $('#toQuiz').click(function () {
   audio.play();
 });
 
+// On-load, sweet alert pop-up
+if ("input" !== null) {
+  swal("👋Welcome! What is your name?", {
+    content: "input",
+  })
+    .then((value) => {
+      swal(`✨Hello ${value}! Hope you find the perfect skincare product you have been searching for! Remember that skincare is self-care, so live your best life!✨`);
+    });
+} else {
+  swal(`✨Hello! Hope you find the perfect skincare product you have been searching for! Remember that skincare is self-care, so live your best life!✨`);
+}
+
 skincareApp.init = function(){
   // Create an event listener for a 'submit' event
   $('form').on('submit', function (e) {
@@ -652,12 +664,13 @@ skincareApp.init = function(){
   // Toggle Quiz and scroll down
   $('#toQuiz').click(function () {
     $('form').trigger('reset');
-    $('.quiz').show();
-    smoothScroll('.questionBlock');
+    $('.qOne').show().css('display', 'flex');
+    smoothScroll('.qOne');
   });
 
   // Scroll to next question
   $('.nextQuestion').on('click', function () {
+    $(this).parent().next().show().css('display', 'flex');
     smoothScroll($(this).parent().next());
   });
   
@@ -671,16 +684,10 @@ skincareApp.init = function(){
   // Allow user to start quiz again (clears previous selections)
   $('#skincareProduct').on('click', '#redo', function () {
     $('form').trigger('reset');
-    $('section').fadeOut(600, 'linear');
+    smoothScroll('.qOne');
   });
 }
 
 $(function(){
-  swal("👋Welcome! What is your name?", {
-    content: "input",
-  })
-    .then((value) => {
-      swal(`✨Hello ${value}! Hope you find the perfect skincare product you have been searching for! Remember that skincare is self-care, so live your best life!✨`);
-    });
   skincareApp.init();
 });

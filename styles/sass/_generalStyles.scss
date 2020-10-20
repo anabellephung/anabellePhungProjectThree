@@ -6,7 +6,11 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
+  font-size: 1.6rem;
+  font-family: $fontStackBody;
   line-height: 1.5;
+  background: $main;
+  color: $primary-dark;
 }
 
 .noScroll {
@@ -25,49 +29,16 @@ body {
   margin: 0 auto;
 }
 
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-ul[class],
-ol[class] {
-  list-style: none;
-}
-
-a:not([class]) {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-button {
-  cursor: pointer;
-  border: none;
+h1, h2, .errorP {
+  font-family: $fontStackHeading;
 }
 
 button,
 a {
+  font-family: $fontStackBody;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 5px;
   text-align: center;
   padding: 20px;
   border-radius: 50px;
@@ -85,18 +56,29 @@ a {
   }
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  color: $primary-dark;
+}
+
 .swal-modal {
-  background: #b695bd;
+  background: $main;
 }
 
 .swal-text {
   letter-spacing: 3px;
+  line-height: 1.8;
   text-align: center;
-  color: #0e0b0d;
-  text-shadow: 1px 1px 1px #f7f0f0;
+  color: $primary-dark;
+  text-shadow: 1px 1px 1px $primary-light;
 }
 
 .swal-content__input {
-  background: #f7f0f0;
-  text-shadow: 1px 1px 1px #b695bd;
+  letter-spacing: 3px;
+  background:$primary-light;
+  text-shadow: 1px 1px 1px $main;
 }
